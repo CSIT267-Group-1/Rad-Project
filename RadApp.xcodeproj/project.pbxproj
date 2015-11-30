@@ -490,6 +490,7 @@
 				D65B806B1C0CF3E900C3E444 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D65B806C1C0CF3E900C3E444 /* Build configuration list for PBXNativeTarget "RadAppTests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +499,7 @@
 				D65B806E1C0CF3E900C3E444 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D65B806F1C0CF3E900C3E444 /* Build configuration list for PBXNativeTarget "RadAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +508,7 @@
 				D65B80711C0CF3E900C3E444 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
