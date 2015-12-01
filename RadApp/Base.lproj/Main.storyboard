@@ -1,66 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mTU-ae-muo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9pv-A4-QxB">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
-        <scene sceneID="IJw-7s-Qqq">
-            <objects>
-                <viewController id="5Cz-bX-4JQ" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="VEb-LZ-mVP"/>
-                        <viewControllerLayoutGuide type="bottom" id="Mlu-Zb-qLg"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="4B4-YQ-7Ns">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="JZx-n7-CqT"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6xR-Nt-70f" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1218" y="-330"/>
-        </scene>
-        <!--Item 1-->
-        <scene sceneID="Dei-Nb-3uX">
-            <objects>
-                <viewController id="Qfc-I9-0TE" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ghe-7O-sHr"/>
-                        <viewControllerLayoutGuide type="bottom" id="ufH-b9-fQ5"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="sVM-c2-FWs">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="XmO-w2-f0a"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NFA-Eh-oOQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1218" y="-1016"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="0XA-83-bbO">
-            <objects>
-                <tabBarController id="mTU-ae-muo" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" itemPositioning="centered" itemSpacing="20" id="Ndp-O2-p7n">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="Qfc-I9-0TE" kind="relationship" relationship="viewControllers" id="SHT-dH-AEL"/>
-                        <segue destination="5Cz-bX-4JQ" kind="relationship" relationship="viewControllers" id="fZm-Gv-3Ne"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wFF-a6-sfX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="402" y="-658"/>
-        </scene>
         <!--Model-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
@@ -117,15 +61,18 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="modelSeg" destination="xXT-Zy-2H4" id="PMA-87-KDw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-506" y="562"/>
         </scene>
-        <!--View Controller-->
+        <!--QuizAP-->
         <scene sceneID="9Jk-vK-RIa">
             <objects>
-                <viewController id="5qi-rO-OaG" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QuizAP" title="Quiz AP" id="5qi-rO-OaG" userLabel="QuizAP" customClass="QuizPAViewController" customModule="RadApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bDV-ZB-Wvs"/>
                         <viewControllerLayoutGuide type="bottom" id="dvy-Rp-Kvh"/>
@@ -134,15 +81,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6GM-uh-V0l">
+                                <rect key="frame" x="602" y="556" width="78" height="30"/>
+                                <state key="normal" title="Dismiss"/>
+                                <connections>
+                                    <action selector="dismissQuiz:" destination="5qi-rO-OaG" eventType="touchUpInside" id="luF-Hk-OO5"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quiz PA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7O-SW-yoB">
+                                <rect key="frame" x="482" y="20" width="60" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LGL-ab-eSl">
+                                <rect key="frame" x="0.0" y="688" width="1024" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="#1:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIf-BG-vGp">
+                                        <rect key="frame" x="8" y="29" width="23" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The transverse colon on a PA view of a barium enema should be ___________ filled?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2az-iv-Amo">
+                                        <rect key="frame" x="49" y="29" width="967" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DLI-Ht-ARP">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <rect key="frame" x="0.0" y="61" width="1024" height="613"/>
                             </imageView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bsB-gH-e2K">
-                                <rect key="frame" x="0.0" y="724" width="1024" height="44"/>
-                                <items>
-                                    <barButtonItem title="Quiz" id="gHF-AQ-U0p"/>
-                                </items>
-                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

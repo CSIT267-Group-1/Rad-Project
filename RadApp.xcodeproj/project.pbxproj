@@ -15,6 +15,7 @@
 		D65B804F1C0CF3E900C3E444 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D65B804D1C0CF3E900C3E444 /* LaunchScreen.storyboard */; };
 		D65B805A1C0CF3E900C3E444 /* RadAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65B80591C0CF3E900C3E444 /* RadAppTests.swift */; };
 		D65B80651C0CF3E900C3E444 /* RadAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65B80641C0CF3E900C3E444 /* RadAppUITests.swift */; };
+		FC14305E1C0D1897003580A7 /* QuizPAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC14305D1C0D1897003580A7 /* QuizPAViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		D65B80601C0CF3E900C3E444 /* RadAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RadAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D65B80641C0CF3E900C3E444 /* RadAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadAppUITests.swift; sourceTree = "<group>"; };
 		D65B80661C0CF3E900C3E444 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC14305D1C0D1897003580A7 /* QuizPAViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizPAViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		D65B80411C0CF3E900C3E444 /* RadApp */ = {
 			isa = PBXGroup;
 			children = (
+				FC14305D1C0D1897003580A7 /* QuizPAViewController.swift */,
 				D65B80421C0CF3E900C3E444 /* AppDelegate.swift */,
 				D65B80441C0CF3E900C3E444 /* FirstViewController.swift */,
 				D65B80461C0CF3E900C3E444 /* SecondViewController.swift */,
@@ -261,6 +264,7 @@
 			files = (
 				D65B80471C0CF3E900C3E444 /* SecondViewController.swift in Sources */,
 				D65B80431C0CF3E900C3E444 /* AppDelegate.swift in Sources */,
+				FC14305E1C0D1897003580A7 /* QuizPAViewController.swift in Sources */,
 				D65B80451C0CF3E900C3E444 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
