@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9pv-A4-QxB">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--Model-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController title="Model" id="9pv-A4-QxB" customClass="FirstViewController" customModule="RadApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
+                        <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RD4-2T-nlo">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="724"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7mo-bL-yEv">
+                                <rect key="frame" x="0.0" y="724" width="1024" height="44"/>
+                                <animations/>
+                                <items>
+                                    <barButtonItem style="plain" id="LUe-gX-EEG">
+                                        <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="DjD-eX-rco">
+                                            <rect key="frame" x="20" y="7" width="51" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
+                                        </switch>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="A51-rG-4fA"/>
+                                    <barButtonItem title="Quiz" id="orc-MJ-ce2">
+                                        <connections>
+                                            <action selector="determineQuiz:" destination="9pv-A4-QxB" id="YZ1-3F-Aot"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="MzS-XX-b0R"/>
+                                    <barButtonItem style="plain" id="nNf-bm-KcQ">
+                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="xXT-Zy-2H4">
+                                            <rect key="frame" x="678" y="7" width="326" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
+                                            <segments>
+                                                <segment title="AP"/>
+                                                <segment title="PA"/>
+                                                <segment title="Left"/>
+                                                <segment title="Right"/>
+                                            </segments>
+                                        </segmentedControl>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="modelSeg" destination="xXT-Zy-2H4" id="8DS-cG-AIE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-294" y="491"/>
+        </scene>
+        <!--QuizPA-->
+        <scene sceneID="9Jk-vK-RIa">
+            <objects>
+                <viewController storyboardIdentifier="QuizPA" id="5qi-rO-OaG" userLabel="QuizPA" customClass="QuizPAViewController" customModule="RadApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bDV-ZB-Wvs"/>
+                        <viewControllerLayoutGuide type="bottom" id="dvy-Rp-Kvh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iEx-kb-u06">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Barium Enema PA View" translatesAutoresizingMaskIntoConstraints="NO" id="DLI-Ht-ARP">
+                                <rect key="frame" x="0.0" y="53" width="1024" height="636"/>
+                                <animations/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gfv-JB-KgI">
+                                <rect key="frame" x="0.0" y="683" width="1024" height="85"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="#1:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pq4-tO-Lkr">
+                                        <rect key="frame" x="8" y="32" width="23" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The transverse colon on a PA view of a barium enema should be ___________ filled?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mh-mP-wMZ">
+                                        <rect key="frame" x="39" y="32" width="891" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wli-m2-vqI">
+                                        <rect key="frame" x="950" y="28" width="49" height="30"/>
+                                        <state key="normal" title="Submit"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quiz PA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8b-k6-s7X">
+                                <rect key="frame" x="483" y="20" width="60" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9vf-kk-fYT">
+                                <rect key="frame" x="950" y="645" width="54" height="30"/>
+                                <state key="normal" title="Dismiss"/>
+                                <connections>
+                                    <action selector="dismissQuiz:" destination="5qi-rO-OaG" eventType="touchUpInside" id="X34-Sd-Hbk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mVR-vj-2K5" userLabel="Hepatic Flexure">
+                                <rect key="frame" x="281" y="214" width="124" height="88"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="FnA-2D-3US"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zjU-N7-pU5" userLabel="Transverse Colon">
+                                <rect key="frame" x="435" y="281" width="124" height="102"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="nNq-UZ-DTm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ux9-5n-9MV" userLabel="Splenic Flexure">
+                                <rect key="frame" x="622" y="96" width="120" height="83"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="uNN-qy-GUl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUg-4U-4IO" userLabel="Sigmoid">
+                                <rect key="frame" x="472" y="605" width="95" height="70"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="SQR-9V-inB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="SXG-XD-RFh" userLabel="Descending Colon">
+                                <rect key="frame" x="604" y="281" width="126" height="101"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="aqN-ck-FWc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbx-72-7b0" userLabel="Ascending Colon">
+                                <rect key="frame" x="288" y="387" width="117" height="105"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="e09-aS-64B"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ivA-U9-Gyj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-936" y="1753"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="RGn-TO-nVr">
+            <objects>
+                <viewController id="cas-GZ-zai" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ubd-lr-b8i"/>
+                        <viewControllerLayoutGuide type="bottom" id="lZQ-Se-oWf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gtk-ad-V19">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qra-KL-agg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="704" y="1669"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="S95-75-QCj">
+            <objects>
+                <viewController id="qc2-II-aGp" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wP9-U3-d7c"/>
+                        <viewControllerLayoutGuide type="bottom" id="b4L-7y-aJs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZdI-Ie-eZF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Vh-sC-sjv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1404" y="1669"/>
+        </scene>
+        <!--AP-->
+        <scene sceneID="bcm-CX-cWf">
+            <objects>
+                <viewController title="AP" id="ua8-pq-B1f" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kRX-kh-OLx"/>
+                        <viewControllerLayoutGuide type="bottom" id="Gbg-rf-Pi9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MEx-tt-rnJ">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S70-wR-Wuo">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="724"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Barium Enema AP View" translatesAutoresizingMaskIntoConstraints="NO" id="J89-tl-tJQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="724"/>
+                                        <animations/>
+                                    </imageView>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lVb-Nl-3Rh">
+                                <rect key="frame" x="0.0" y="724" width="1024" height="44"/>
+                                <animations/>
+                                <items>
+                                    <barButtonItem title="Item" id="OsX-hP-G91"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wAS-8w-xGn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1404" y="283"/>
+        </scene>
+        <!--PA-->
+        <scene sceneID="VkO-rR-0In">
+            <objects>
+                <viewController title="PA" id="grv-y0-DjV" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cl2-55-c24"/>
+                        <viewControllerLayoutGuide type="bottom" id="6Fn-LI-FkI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HCJ-m4-uyD">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AhW-nw-Xd4">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="724"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Barium Enema PA View" translatesAutoresizingMaskIntoConstraints="NO" id="nJe-WR-Ybp">
+                                        <rect key="frame" x="0.0" y="0.0" width="1027" height="724"/>
+                                        <animations/>
+                                    </imageView>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w60-kZ-Nmk">
+                                <rect key="frame" x="0.0" y="724" width="1024" height="44"/>
+                                <animations/>
+                                <items>
+                                    <barButtonItem title="Item" id="0n0-q9-Ipc"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UIb-wj-4mq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1404" y="-633"/>
+        </scene>
+        <!--Left-->
+        <scene sceneID="7l3-uY-fLI">
+            <objects>
+                <viewController title="Left" id="aFO-TW-PDf" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="61E-pz-DUf"/>
+                        <viewControllerLayoutGuide type="bottom" id="u8Q-vq-RH5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FEC-Sl-C39">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Lg-O0-V0x">
+                                <rect key="frame" x="0.0" y="724" width="1024" height="44"/>
+                                <animations/>
+                                <items>
+                                    <barButtonItem title="Item" id="aLg-Fd-sd9"/>
+                                </items>
+                            </toolbar>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qia-o1-lBa">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="724"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Barium Enema LLD" translatesAutoresizingMaskIntoConstraints="NO" id="1Xe-c9-n4O">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="724"/>
+                                        <animations/>
+                                    </imageView>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3I3-Tx-7cK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2534" y="-626"/>
+        </scene>
+        <!--Right-->
+        <scene sceneID="a4K-3U-I4i">
+            <objects>
+                <viewController title="Right" id="5HX-dW-bto" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Dmk-Cg-Gei"/>
+                        <viewControllerLayoutGuide type="bottom" id="bif-YK-x8B"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YDr-YO-86Z">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4mO-Ol-6mR">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="724"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Barium Enema RLD" translatesAutoresizingMaskIntoConstraints="NO" id="Pdx-w1-gNg">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="724"/>
+                                        <animations/>
+                                    </imageView>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5mC-kf-A5i">
+                                <rect key="frame" x="0.0" y="724" width="1024" height="44"/>
+                                <animations/>
+                                <items>
+                                    <barButtonItem title="Item" id="Ddj-XM-Oar"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="93F-UT-B3i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2534" y="283"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Hme-Tc-35B">
+            <objects>
+                <viewController id="M4q-qa-1It" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vc6-gf-4vJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="5eZ-3d-Caj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LfQ-GE-KIT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A9D-zH-SIp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-42" y="1669"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Barium Enema AP View" width="2448" height="3264"/>
+        <image name="Barium Enema LLD" width="3264" height="2448"/>
+        <image name="Barium Enema PA View" width="2448" height="3264"/>
+        <image name="Barium Enema RLD" width="3264" height="2448"/>
+    </resources>
+</document>

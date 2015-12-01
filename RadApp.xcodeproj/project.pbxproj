@@ -10,12 +10,12 @@
 		D65B80431C0CF3E900C3E444 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65B80421C0CF3E900C3E444 /* AppDelegate.swift */; };
 		D65B80451C0CF3E900C3E444 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65B80441C0CF3E900C3E444 /* FirstViewController.swift */; };
 		D65B80471C0CF3E900C3E444 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65B80461C0CF3E900C3E444 /* SecondViewController.swift */; };
-		D65B804A1C0CF3E900C3E444 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D65B80481C0CF3E900C3E444 /* Main.storyboard */; };
 		D65B804C1C0CF3E900C3E444 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D65B804B1C0CF3E900C3E444 /* Assets.xcassets */; };
 		D65B804F1C0CF3E900C3E444 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D65B804D1C0CF3E900C3E444 /* LaunchScreen.storyboard */; };
 		D65B805A1C0CF3E900C3E444 /* RadAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65B80591C0CF3E900C3E444 /* RadAppTests.swift */; };
 		D65B80651C0CF3E900C3E444 /* RadAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65B80641C0CF3E900C3E444 /* RadAppUITests.swift */; };
 		FC14305E1C0D1897003580A7 /* QuizPAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC14305D1C0D1897003580A7 /* QuizPAViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		FC1430601C0D27DA003580A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC14305F1C0D27DA003580A7 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +40,6 @@
 		D65B80421C0CF3E900C3E444 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D65B80441C0CF3E900C3E444 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		D65B80461C0CF3E900C3E444 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		D65B80491C0CF3E900C3E444 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D65B804B1C0CF3E900C3E444 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D65B804E1C0CF3E900C3E444 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D65B80501C0CF3E900C3E444 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +50,7 @@
 		D65B80641C0CF3E900C3E444 /* RadAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadAppUITests.swift; sourceTree = "<group>"; };
 		D65B80661C0CF3E900C3E444 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC14305D1C0D1897003580A7 /* QuizPAViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizPAViewController.swift; sourceTree = "<group>"; };
+		FC14305F1C0D27DA003580A7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +105,7 @@
 				D65B80421C0CF3E900C3E444 /* AppDelegate.swift */,
 				D65B80441C0CF3E900C3E444 /* FirstViewController.swift */,
 				D65B80461C0CF3E900C3E444 /* SecondViewController.swift */,
-				D65B80481C0CF3E900C3E444 /* Main.storyboard */,
+				FC14305F1C0D27DA003580A7 /* Main.storyboard */,
 				D65B804B1C0CF3E900C3E444 /* Assets.xcassets */,
 				D65B804D1C0CF3E900C3E444 /* LaunchScreen.storyboard */,
 				D65B80501C0CF3E900C3E444 /* Info.plist */,
@@ -235,9 +235,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC1430601C0D27DA003580A7 /* Main.storyboard in Resources */,
 				D65B804F1C0CF3E900C3E444 /* LaunchScreen.storyboard in Resources */,
 				D65B804C1C0CF3E900C3E444 /* Assets.xcassets in Resources */,
-				D65B804A1C0CF3E900C3E444 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,14 +301,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D65B80481C0CF3E900C3E444 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D65B80491C0CF3E900C3E444 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D65B804D1C0CF3E900C3E444 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

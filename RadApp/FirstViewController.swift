@@ -9,7 +9,7 @@
 import UIKit
 
 class FirstViewController: UIViewController {
-    
+
     @IBOutlet var modelSeg: UISegmentedControl!
     
     @IBAction func determineQuiz(sender: AnyObject) {
@@ -18,15 +18,15 @@ class FirstViewController: UIViewController {
 
         switch (segSelection)
         {
-        case 0:
-            let editorVC = mainStoryBoard.instantiateViewControllerWithIdentifier("QuizAP")
+        case 1:
+            let editorVC = mainStoryBoard.instantiateViewControllerWithIdentifier("QuizPA")
             editorVC.modalTransitionStyle = UIModalTransitionStyle.CoverVertical
             presentViewController(editorVC, animated: true, completion: nil)
         default:
             print("Failed to start quiz")
         }
     }
-    
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
