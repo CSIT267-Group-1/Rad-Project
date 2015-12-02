@@ -201,7 +201,7 @@
         <!--QuizLLD-->
         <scene sceneID="RGn-TO-nVr">
             <objects>
-                <viewController title="QuizLLD" id="cas-GZ-zai" sceneMemberID="viewController">
+                <viewController title="QuizLLD" id="cas-GZ-zai" customClass="QuizLLDViewController" customModule="RadApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ubd-lr-b8i"/>
                         <viewControllerLayoutGuide type="bottom" id="lZQ-Se-oWf"/>
@@ -222,7 +222,7 @@
         <!--QuizRLD-->
         <scene sceneID="S95-75-QCj">
             <objects>
-                <viewController title="QuizRLD" id="qc2-II-aGp" sceneMemberID="viewController">
+                <viewController title="QuizRLD" id="qc2-II-aGp" customClass="QuizRLDViewController" customModule="RadApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wP9-U3-d7c"/>
                         <viewControllerLayoutGuide type="bottom" id="b4L-7y-aJs"/>
@@ -407,7 +407,7 @@
         <!--QuizAP-->
         <scene sceneID="Hme-Tc-35B">
             <objects>
-                <viewController title="QuizAP" id="M4q-qa-1It" sceneMemberID="viewController">
+                <viewController title="QuizAP" id="M4q-qa-1It" customClass="QuizAPViewController" customModule="RadApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Vc6-gf-4vJ"/>
                         <viewControllerLayoutGuide type="bottom" id="5eZ-3d-Caj"/>
