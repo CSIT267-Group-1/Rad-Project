@@ -32,4 +32,7 @@ class QuizAPViewController: UIViewController {
     }
     */
 
+    @IBAction func dissmiss(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
 }

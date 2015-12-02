@@ -18,8 +18,20 @@ class FirstViewController: UIViewController {
 
         switch (segSelection)
         {
+        case 0:
+            let editorVC = mainStoryBoard.instantiateViewControllerWithIdentifier("QuizAP")
+            editorVC.modalTransitionStyle = UIModalTransitionStyle.CoverVertical
+            presentViewController(editorVC, animated: true, completion: nil)
         case 1:
             let editorVC = mainStoryBoard.instantiateViewControllerWithIdentifier("QuizPA")
+            editorVC.modalTransitionStyle = UIModalTransitionStyle.CoverVertical
+            presentViewController(editorVC, animated: true, completion: nil)
+        case 2:
+            let editorVC = mainStoryBoard.instantiateViewControllerWithIdentifier("QuizLLD")
+            editorVC.modalTransitionStyle = UIModalTransitionStyle.CoverVertical
+            presentViewController(editorVC, animated: true, completion: nil)
+        case 3:
+            let editorVC = mainStoryBoard.instantiateViewControllerWithIdentifier("QuizRLD")
             editorVC.modalTransitionStyle = UIModalTransitionStyle.CoverVertical
             presentViewController(editorVC, animated: true, completion: nil)
         default:

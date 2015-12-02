@@ -32,4 +32,7 @@ class QuizLLDViewController: UIViewController {
     }
     */
 
+    @IBAction func dismiss(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
 }
