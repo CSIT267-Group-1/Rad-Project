@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		D65B80431C0CF3E900C3E444 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65B80421C0CF3E900C3E444 /* AppDelegate.swift */; };
 		D65B80451C0CF3E900C3E444 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65B80441C0CF3E900C3E444 /* FirstViewController.swift */; };
-		D65B804C1C0CF3E900C3E444 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D65B804B1C0CF3E900C3E444 /* Assets.xcassets */; };
 		D65B804F1C0CF3E900C3E444 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D65B804D1C0CF3E900C3E444 /* LaunchScreen.storyboard */; };
 		D65B805A1C0CF3E900C3E444 /* RadAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65B80591C0CF3E900C3E444 /* RadAppTests.swift */; };
 		D65B80651C0CF3E900C3E444 /* RadAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65B80641C0CF3E900C3E444 /* RadAppUITests.swift */; };
@@ -42,7 +41,6 @@
 		D65B803F1C0CF3E900C3E444 /* RadApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RadApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D65B80421C0CF3E900C3E444 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D65B80441C0CF3E900C3E444 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		D65B804B1C0CF3E900C3E444 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D65B804E1C0CF3E900C3E444 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D65B80501C0CF3E900C3E444 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D65B80551C0CF3E900C3E444 /* RadAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RadAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,7 +113,6 @@
 				D6D156291C0F9EE90035882E /* QuizRLDViewController.swift */,
 				D6D156251C0F9ED50035882E /* QuizAPViewController.swift */,
 				FC9577581C18C994001C0897 /* Quiz.swift */,
-				D65B804B1C0CF3E900C3E444 /* Assets.xcassets */,
 				D65B804D1C0CF3E900C3E444 /* LaunchScreen.storyboard */,
 				D65B80501C0CF3E900C3E444 /* Info.plist */,
 			);
@@ -247,7 +244,6 @@
 			files = (
 				FC1430601C0D27DA003580A7 /* Main.storyboard in Resources */,
 				D65B804F1C0CF3E900C3E444 /* LaunchScreen.storyboard in Resources */,
-				D65B804C1C0CF3E900C3E444 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
