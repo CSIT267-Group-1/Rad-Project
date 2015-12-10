@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9pv-A4-QxB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9pv-A4-QxB">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
         <!--Model-->
@@ -22,7 +22,7 @@
                                 <items>
                                     <barButtonItem style="plain" id="LUe-gX-EEG">
                                         <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="DjD-eX-rco">
-                                            <rect key="frame" x="20" y="7" width="51" height="31"/>
+                                            <rect key="frame" x="20" y="6.5" width="51" height="31"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
                                             <connections>
@@ -556,6 +556,7 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Lm-pf-O0F">
                                                         <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                                        <animations/>
                                                         <state key="normal" title="Button"/>
                                                         <connections>
                                                             <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="TO7-3E-cJO"/>
@@ -563,6 +564,7 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ilk-wE-ih5">
                                                         <rect key="frame" x="146" y="0.0" width="46" height="30"/>
+                                                        <animations/>
                                                         <state key="normal" title="Button"/>
                                                         <connections>
                                                             <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="pgn-lt-Dp9"/>
@@ -570,6 +572,7 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Wk-Y7-ixW">
                                                         <rect key="frame" x="292" y="0.0" width="46" height="30"/>
+                                                        <animations/>
                                                         <state key="normal" title="Button"/>
                                                         <connections>
                                                             <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="QuD-v3-NeW"/>
@@ -577,12 +580,14 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HRB-sV-kZN">
                                                         <rect key="frame" x="438" y="0.0" width="46" height="30"/>
+                                                        <animations/>
                                                         <state key="normal" title="Button"/>
                                                         <connections>
                                                             <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="Hzg-8Y-Bkq"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
+                                                <animations/>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The transverse colon on a PA view of a barium enema should be ___________ filled?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d7t-TG-w0z">
                                                 <rect key="frame" x="62" y="8" width="937" height="21"/>
@@ -674,6 +679,65 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A9D-zH-SIp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="292" y="1739"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="kaG-EE-irZ">
+            <objects>
+                <viewController title="Login" id="YnM-cz-Bnh" customClass="LoginViewController" customModule="RadApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VfZ-rg-6uL"/>
+                        <viewControllerLayoutGuide type="bottom" id="xxb-XD-VqF"/>
+                    </layoutGuides>
+                    <view key="view" alpha="0.5" contentMode="scaleToFill" id="bZV-1p-4xf">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fu2-qw-mhH">
+                                <rect key="frame" x="466" y="20" width="92" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hB2-oj-NHv">
+                                <rect key="frame" x="412" y="87" width="200" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Student ID #" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lKG-ul-vZX">
+                                <rect key="frame" x="412" y="125" width="200" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="done"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X5Y-Kf-0p5">
+                                <rect key="frame" x="488" y="163" width="49" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Submit"/>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1cw-Z9-VBh">
+                                <rect key="frame" x="412" y="49" width="200" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
+                            </textField>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="firstNameField" destination="1cw-Z9-VBh" id="VMz-SH-oL3"/>
+                        <outlet property="lastNameField" destination="hB2-oj-NHv" id="omB-qY-WAc"/>
+                        <outlet property="studentIDField" destination="lKG-ul-vZX" id="hhz-Kx-zJw"/>
+                        <outlet property="submitButton" destination="X5Y-Kf-0p5" id="wXS-iC-IDR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DCW-0A-GL9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="683" y="491"/>
         </scene>
     </scenes>
     <resources>
