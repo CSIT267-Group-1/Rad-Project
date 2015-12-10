@@ -56,11 +56,6 @@ class QuizPAViewController: UIViewController {
             }
         }
         
-        if currentSelectedQuestionIndex+1 == questions.count
-        {
-            endOfQuiz()
-        }
-        
     }
     
     @IBAction func locationSelected(sender: AnyObject) {
@@ -80,7 +75,7 @@ class QuizPAViewController: UIViewController {
         }
     }
 
-    @IBAction func dismissQuiz(sender: AnyObject) {
+    @IBAction func dismissQuiz(sender: AnyObject?) {
         dismissViewControllerAnimated(true, completion: nil)
     }
     
@@ -124,7 +119,20 @@ class QuizPAViewController: UIViewController {
     
     func shuffleQuestions()
     {
+        let totalQuestion = questions.count
+        var randomInt: Int
+        var tempQuestions = [Quiz]()
         
+        //picks a random question from the questions arrray and moves it to the temp array
+        for var count = 0; count < totalQuestion; count++
+        {
+            randomInt = Int(arc4random_uniform(UInt32(questions.count)))
+            tempQuestions.append(questions[randomInt])
+            questions.removeAtIndex(randomInt)
+        }
+        
+        // sets the new shuffled question to the main array
+        questions=tempQuestions
     }
     
     //displays a question in the questions array by the given index number pasted
@@ -167,9 +175,18 @@ class QuizPAViewController: UIViewController {
         let alertController = UIAlertController(title: "Your Answer Was Right", message: "Good Job.", preferredStyle: UIAlertControllerStyle.Alert)
         
         let defaultAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: {(alertAction: UIAlertAction!) in
-            self.resetSelection()
-            self.currentSelectedQuestionIndex++
-            self.displayQuestion(self.currentSelectedQuestionIndex)
+
+            // for end of quiz
+            if self.currentSelectedQuestionIndex+1 == self.questions.count
+            {
+                self.endOfQuiz()
+            }
+            else
+            {
+                self.resetSelection()
+                self.currentSelectedQuestionIndex++
+                self.displayQuestion(self.currentSelectedQuestionIndex)
+            }
 
         })
         
@@ -195,10 +212,18 @@ class QuizPAViewController: UIViewController {
         let alertController = UIAlertController(title: "Your Answer Was Wrong", message: "The correct answer is highlighted in green.", preferredStyle: UIAlertControllerStyle.Alert)
         
         let defaultAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: {(alertAction: UIAlertAction!) in
-            
-            self.resetSelection()
-            self.currentSelectedQuestionIndex++
-            self.displayQuestion(self.currentSelectedQuestionIndex)
+
+            //for end of quiz
+            if self.currentSelectedQuestionIndex+1 == self.questions.count
+            {
+                self.endOfQuiz()
+            }
+            else
+            {
+                self.resetSelection()
+                self.currentSelectedQuestionIndex++
+                self.displayQuestion(self.currentSelectedQuestionIndex)
+            }
         })
         
         alertController.addAction(defaultAction)
@@ -218,7 +243,22 @@ class QuizPAViewController: UIViewController {
     // for the end of the quiz
     func endOfQuiz()
     {
+        //displays results of the user
+        let alertController = UIAlertController(title: "End of Quiz", message: "You scored \(right)/\(questions.count).", preferredStyle: UIAlertControllerStyle.Alert)
         
+        let defaultAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: {(alertAction: UIAlertAction!) in
+            
+            self.displayEmail()
+        })
+        
+        alertController.addAction(defaultAction)
+        presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    func displayEmail()
+    {
+        //TESTING
+        dismissQuiz(nil)
     }
 
 }
