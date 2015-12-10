@@ -10,12 +10,22 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
 	var window: UIWindow?
 
-
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-		// Override point for customization after application launch.
+		// Override point for customization after application launch. login function for when app first starts
+		let alertController = UIAlertController(title: "Please login", message: "Please enter the appropriate information", preferredStyle: UIAlertControllerStyle.Alert)
+		alertController.addTextFieldWithConfigurationHandler({(firstNameField: UITextField!) in
+			firstNameField.placeholder = "First name"
+		})
+		alertController.addTextFieldWithConfigurationHandler({(lastNameField: UITextField!) in
+			lastNameField.placeholder = "Last name"
+		})
+		alertController.addTextFieldWithConfigurationHandler({(studentIDField: UITextField!) in
+			studentIDField.placeholder = "Student ID #"
+			studentIDField.keyboardType = UIKeyboardType.NumberPad
+		})
+		self.window?.rootViewController?.presentViewController(alertController, animated: true, completion: nil)
 		return true
 	}
 
