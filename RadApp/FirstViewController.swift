@@ -15,11 +15,7 @@ class FirstViewController: UIViewController {
 	var firstName: String!
 	var lastName: String!
 	var studentID: Int!
-	
-	//set default image in huge image view
-	func setDefaultImage() {
-		
-	}
+	var didFinishLogin: Bool = false
 	
 	//changes picture in imageview on main screen
 	@IBAction func changePicture(sender: AnyObject) {
@@ -101,7 +97,8 @@ class FirstViewController: UIViewController {
     }
 	
 	func pleaseLogin() {
-		//alert for login
+		//transfer to view controller for login
+		/*//alert for login
 		let alertController = UIAlertController(title: "Please login", message: "Please enter the appropriate information", preferredStyle: UIAlertControllerStyle.Alert)
 		alertController.addTextFieldWithConfigurationHandler({(firstNameField: UITextField!) in
 			firstNameField.placeholder = "First name"
@@ -111,18 +108,35 @@ class FirstViewController: UIViewController {
 		})
 		alertController.addTextFieldWithConfigurationHandler({(studentIDField: UITextField!) in
 			studentIDField.placeholder = "Student ID #"
-			studentIDField.keyboardType = UIKeyboardType.NumberPad
+			studentIDField.keyboardType = UIKeyboardType.PhonePad
 		})
 		alertController.addAction(UIAlertAction(title: "Submit", style: UIAlertActionStyle.Default, handler: {(alertAction: UIAlertAction!) in
-			self.firstName = alertController.textFields![0].text! as String
-			self.lastName = alertController.textFields![1].text! as String
-			self.studentID = Int(alertController.textFields![2].text! as String)!
+			if(alertController.textFields![0].text! == "" || alertController.textFields![1].text! == "" || alertController.textFields![2].text! == "") {
+				let errorController = UIAlertController(title: "Error!", message: "Please enter your information in every field", preferredStyle: UIAlertControllerStyle.Alert)
+				errorController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Destructive, handler: nil))
+				self.presentViewController(errorController, animated: true, completion: nil)
+			}
+			else {
+				self.firstName = alertController.textFields![0].text! as String
+				self.lastName = alertController.textFields![1].text! as String
+				if(Int(alertController.textFields![2].text!) == nil) {
+					let errorController = UIAlertController(title: "Error!", message: "Please enter only numbers in the \"Student ID #\" field", preferredStyle: UIAlertControllerStyle.Alert)
+					errorController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Destructive, handler: nil))
+					self.presentViewController(errorController, animated: true, completion: nil)
+				}
+				else {
+					self.studentID = Int(alertController.textFields![2].text! as String)!
+				}
+				self.didFinishLogin = true
+			}
 		}))
-		self.presentViewController(alertController, animated: true, completion: nil)
+		self.presentViewController(alertController, animated: true, completion: nil)*/
 	}
 	
 	override func viewDidAppear(animated: Bool) {
-		pleaseLogin()
+		if(!didFinishLogin) {
+			pleaseLogin()
+		}
 	}
 	
 	override func viewDidLoad() {
