@@ -17,6 +17,12 @@ class FirstViewController: UIViewController {
 	var studentID: Int!
 	var didFinishLogin: Bool = false
 	
+    
+    // Tesing login =. DELETE WHEN DONE***********
+    @IBAction func testingLogin(sender: AnyObject) {
+        pleaseLogin()
+    }
+    
 	//changes picture in imageview on main screen
 	@IBAction func changePicture(sender: AnyObject) {
 		let segSelection: Int = modelSeg.selectedSegmentIndex
@@ -139,7 +145,7 @@ class FirstViewController: UIViewController {
 	
 	override func viewDidAppear(animated: Bool) {
 		if(!didFinishLogin) {
-			pleaseLogin()
+			//pleaseLogin()
 		}
 	}
 	
