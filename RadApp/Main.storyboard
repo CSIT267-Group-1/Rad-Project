@@ -97,32 +97,47 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wli-m2-vqI">
-                                        <rect key="frame" x="967" y="47" width="49" height="30"/>
-                                        <animations/>
-                                        <state key="normal" title="Submit"/>
-                                    </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="dr7-fI-5Rn">
                                         <rect key="frame" x="49" y="47" width="484" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vaB-qP-GDB">
                                                 <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="IoG-Ju-gAz"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="We9-We-YP1">
                                                 <rect key="frame" x="146" y="0.0" width="46" height="30"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="g2q-61-9gg"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pAr-tF-jLW">
                                                 <rect key="frame" x="292" y="0.0" width="46" height="30"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="EZH-Ud-Iou"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vut-d2-ozj">
                                                 <rect key="frame" x="438" y="0.0" width="46" height="30"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="7dr-gz-voz"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wli-m2-vqI">
+                                        <rect key="frame" x="957" y="47" width="49" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="Submit"/>
+                                        <connections>
+                                            <action selector="submit:" destination="5qi-rO-OaG" eventType="touchUpInside" id="6Kx-tc-VLU"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -142,62 +157,62 @@
                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mVR-vj-2K5" userLabel="Hepatic Flexure">
                                 <rect key="frame" x="281" y="214" width="124" height="88"/>
                                 <animations/>
-                                <state key="normal">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <state key="normal" title="Hepatic Flexure">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="FnA-2D-3US"/>
+                                    <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="IuS-Z2-8mA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zjU-N7-pU5" userLabel="Transverse Colon">
                                 <rect key="frame" x="435" y="281" width="124" height="102"/>
                                 <animations/>
-                                <state key="normal">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <state key="normal" title="Transverse Colon">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="nNq-UZ-DTm"/>
+                                    <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="2Oo-LC-bQP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ux9-5n-9MV" userLabel="Splenic Flexure">
                                 <rect key="frame" x="622" y="96" width="120" height="83"/>
                                 <animations/>
-                                <state key="normal">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <state key="normal" title="Splenic Flexure">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="uNN-qy-GUl"/>
+                                    <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="JKE-2o-rtv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUg-4U-4IO" userLabel="Sigmoid">
                                 <rect key="frame" x="472" y="605" width="95" height="70"/>
                                 <animations/>
-                                <state key="normal">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <state key="normal" title="Sigmoid">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="SQR-9V-inB"/>
+                                    <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="QaI-lb-9of"/>
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="SXG-XD-RFh" userLabel="Descending Colon">
                                 <rect key="frame" x="604" y="281" width="126" height="101"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <state key="normal" title="Descending Colon">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="aqN-ck-FWc"/>
+                                    <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="cDx-FU-tL9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbx-72-7b0" userLabel="Ascending Colon">
                                 <rect key="frame" x="288" y="387" width="117" height="105"/>
                                 <animations/>
-                                <state key="normal">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <state key="normal" title="Ascending Colon">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="e09-aS-64B"/>
+                                    <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="6IP-uf-nmv"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PA Quiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8b-k6-s7X">
@@ -226,7 +241,6 @@
                         <outlet property="questionNumber" destination="Pq4-tO-Lkr" id="FQH-xX-UR5"/>
                         <outlet property="sigmoid" destination="hUg-4U-4IO" id="S2A-Yf-uQR"/>
                         <outlet property="spleFlex" destination="Ux9-5n-9MV" id="c6f-y2-0S4"/>
-                        <outlet property="submit" destination="Wli-m2-vqI" id="xA5-B1-lPU"/>
                         <outlet property="tranCol" destination="zjU-N7-pU5" id="a6D-A0-Dlh"/>
                     </connections>
                 </viewController>
@@ -284,36 +298,24 @@
                                         <state key="normal">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         </state>
-                                        <connections>
-                                            <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="GZk-bQ-eUz"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4g3-Nz-22m" userLabel="Transverse Colon">
                                         <rect key="frame" x="435" y="281" width="124" height="102"/>
                                         <state key="normal">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         </state>
-                                        <connections>
-                                            <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="gt5-yN-q7q"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zao-Uq-xw4" userLabel="Splenic Flexure">
                                         <rect key="frame" x="622" y="96" width="120" height="83"/>
                                         <state key="normal">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         </state>
-                                        <connections>
-                                            <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="Mxz-CS-zcz"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DiE-ak-kCC" userLabel="Sigmoid">
                                         <rect key="frame" x="472" y="605" width="95" height="70"/>
                                         <state key="normal">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         </state>
-                                        <connections>
-                                            <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="YSR-QZ-l1u"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="WUA-L6-G5B" userLabel="Descending Colon">
                                         <rect key="frame" x="604" y="281" width="126" height="101"/>
@@ -321,18 +323,12 @@
                                         <state key="normal">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         </state>
-                                        <connections>
-                                            <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="dRK-lv-x9M"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lwh-c8-p6w" userLabel="Ascending Colon">
                                         <rect key="frame" x="288" y="387" width="117" height="105"/>
                                         <state key="normal">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         </state>
-                                        <connections>
-                                            <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="xY4-he-1d2"/>
-                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Left Lateral Decubitus  Quiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8r-7h-tcx">
                                         <rect key="frame" x="392" y="20" width="212" height="21"/>
@@ -407,36 +403,24 @@
                                         <state key="normal">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         </state>
-                                        <connections>
-                                            <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="V6W-1b-XPY"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UuZ-hN-ueg" userLabel="Transverse Colon">
                                         <rect key="frame" x="435" y="281" width="124" height="102"/>
                                         <state key="normal">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         </state>
-                                        <connections>
-                                            <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="v2E-fy-Onj"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJY-Jn-6Hf" userLabel="Splenic Flexure">
                                         <rect key="frame" x="622" y="96" width="120" height="83"/>
                                         <state key="normal">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         </state>
-                                        <connections>
-                                            <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="8Yr-ab-jiu"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40J-lI-DxN" userLabel="Sigmoid">
                                         <rect key="frame" x="472" y="605" width="95" height="70"/>
                                         <state key="normal">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         </state>
-                                        <connections>
-                                            <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="wCe-FS-qWy"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="CT6-1F-qC0" userLabel="Descending Colon">
                                         <rect key="frame" x="604" y="281" width="126" height="101"/>
@@ -444,18 +428,12 @@
                                         <state key="normal">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         </state>
-                                        <connections>
-                                            <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="vfB-7o-p07"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jtc-9D-DL5" userLabel="Ascending Colon">
                                         <rect key="frame" x="288" y="387" width="117" height="105"/>
                                         <state key="normal">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         </state>
-                                        <connections>
-                                            <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="d2A-aw-rZo"/>
-                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Right Lateral Decubitus Quiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ri0-ZH-DVZ">
                                         <rect key="frame" x="389" y="20" width="218" height="21"/>
@@ -694,36 +672,24 @@
                                         <state key="normal">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         </state>
-                                        <connections>
-                                            <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="SJU-XN-vmF"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R0K-eb-LEe" userLabel="Transverse Colon">
                                         <rect key="frame" x="435" y="281" width="124" height="102"/>
                                         <state key="normal">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         </state>
-                                        <connections>
-                                            <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="o5Y-9i-7iD"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3D-gI-Mnx" userLabel="Splenic Flexure">
                                         <rect key="frame" x="622" y="96" width="120" height="83"/>
                                         <state key="normal">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         </state>
-                                        <connections>
-                                            <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="Dc9-pq-bYs"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQt-au-htu" userLabel="Sigmoid">
                                         <rect key="frame" x="472" y="605" width="95" height="70"/>
                                         <state key="normal">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         </state>
-                                        <connections>
-                                            <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="Ygc-CM-yUd"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="cTP-nC-wle" userLabel="Descending Colon">
                                         <rect key="frame" x="604" y="281" width="126" height="101"/>
@@ -731,18 +697,12 @@
                                         <state key="normal">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         </state>
-                                        <connections>
-                                            <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="wd8-Vx-v9V"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wg3-O4-sBD" userLabel="Ascending Colon">
                                         <rect key="frame" x="288" y="387" width="117" height="105"/>
                                         <state key="normal">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         </state>
-                                        <connections>
-                                            <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="UMH-7n-iN3"/>
-                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Anteroposterior Quiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQR-T8-yff">
                                         <rect key="frame" x="418" y="20" width="160" height="21"/>

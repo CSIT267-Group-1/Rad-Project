@@ -23,12 +23,18 @@ class Quiz
     var buttonBTitle: String!
     var buttonCTitle: String!
     var buttonDTitle: String!
+    var correct: Bool!
+    var correctStr: String!
+    var userAnswer: String!
     
     init (question: String, hasMultipleChoice: Bool, correctButton: UIButton, buttonArray: [String]?)
     {
         self.question=question
         self.hasMultipleChoice=hasMultipleChoice
         self.correctButton=correctButton
+        correct = false
+        correctStr = ""
+        userAnswer = ""
         
         if (buttonArray != nil)
         {

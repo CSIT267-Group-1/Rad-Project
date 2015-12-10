@@ -12,6 +12,8 @@ class QuizPAViewController: UIViewController {
     
     var currentSelectedArea: UIButton!
     var currentSelectedQuestionIndex: Int = -1 // stores the current question location from the array
+    var right: Int = 0
+    var wrong: Int = 0
     
     @IBOutlet var hepFelx: UIButton!
     @IBOutlet var tranCol: UIButton!
@@ -21,7 +23,6 @@ class QuizPAViewController: UIViewController {
     @IBOutlet var ascCol: UIButton!
     @IBOutlet var question: UILabel!
     @IBOutlet var questionNumber: UILabel!
-    @IBOutlet var submit: UIButton!
     @IBOutlet var multipleChoiceButtonA: UIButton!
     @IBOutlet var multipleChoiceButtonB: UIButton!
     @IBOutlet var multipleChoiceButtonC: UIButton!
@@ -29,6 +30,38 @@ class QuizPAViewController: UIViewController {
     @IBOutlet var multipleChoiceView: UIStackView!
     
     var questions: [Quiz] = [Quiz]()
+    
+    @IBAction func submit(sender: AnyObject) {
+        
+        if currentSelectedArea == nil
+        {
+            let alertController = UIAlertController(title: "Select an Area", message: "You did no choose and answer to submit. Please selected a answer.", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            let defaultAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: {(alertAction: UIAlertAction!) in
+            })
+            
+            alertController.addAction(defaultAction)
+            presentViewController(alertController, animated: true, completion: nil)
+        }
+        else
+        {
+            // display correct if right answer
+            if currentSelectedArea == questions[currentSelectedQuestionIndex].correctButton
+            {
+                displayCorrect()
+            }
+            else
+            {
+                displayWrong()
+            }
+        }
+        
+        if currentSelectedQuestionIndex+1 == questions.count
+        {
+            endOfQuiz()
+        }
+        
+    }
     
     @IBAction func locationSelected(sender: AnyObject) {
         
@@ -55,9 +88,10 @@ class QuizPAViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+        currentSelectedQuestionIndex = 0
         createQuestions()
-        displayQuestion(7)
+        displayQuestion(currentSelectedQuestionIndex)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -93,6 +127,7 @@ class QuizPAViewController: UIViewController {
         
     }
     
+    //displays a question in the questions array by the given index number pasted
     func displayQuestion(number: Int)
     {
         // Sets the questions labels and number
@@ -114,6 +149,76 @@ class QuizPAViewController: UIViewController {
         {
             multipleChoiceView.hidden=true
         }
+    }
+    
+    // displays the correct answer
+    func displayCorrect()
+    {
+        right++
+        //dispalys the correct question as green
+        questions[currentSelectedQuestionIndex].correctButton.backgroundColor=UIColor.greenColor()
+        
+        //sets corrct variable to true and the text of the answer
+        questions[currentSelectedQuestionIndex].correct=true
+        questions[currentSelectedQuestionIndex].correctStr=questions[currentSelectedQuestionIndex].correctButton.titleLabel?.text
+        questions[currentSelectedQuestionIndex].userAnswer=currentSelectedArea.titleLabel?.text
+
+        //display the alert to left the user know what they did
+        let alertController = UIAlertController(title: "Your Answer Was Right", message: "Good Job.", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        let defaultAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: {(alertAction: UIAlertAction!) in
+            self.resetSelection()
+            self.currentSelectedQuestionIndex++
+            self.displayQuestion(self.currentSelectedQuestionIndex)
+
+        })
+        
+        alertController.addAction(defaultAction)
+        presentViewController(alertController, animated: true, completion: nil)
+
+    }
+    
+    // displays the wrong answer
+    func displayWrong()
+    {
+        wrong++
+        
+        // display the correct answer as green
+        questions[currentSelectedQuestionIndex].correctButton.backgroundColor=UIColor.greenColor()
+        
+        //sets correct variable to false and the text of the answer
+        questions[currentSelectedQuestionIndex].correct=false
+        questions[currentSelectedQuestionIndex].correctStr=questions[currentSelectedQuestionIndex].correctButton.titleLabel?.text
+        questions[currentSelectedQuestionIndex].userAnswer=currentSelectedArea.titleLabel?.text
+        
+        //displays a alert control to let the user know they were wrong
+        let alertController = UIAlertController(title: "Your Answer Was Wrong", message: "The correct answer is highlighted in green.", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        let defaultAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: {(alertAction: UIAlertAction!) in
+            
+            self.resetSelection()
+            self.currentSelectedQuestionIndex++
+            self.displayQuestion(self.currentSelectedQuestionIndex)
+        })
+        
+        alertController.addAction(defaultAction)
+        presentViewController(alertController, animated: true, completion: nil)
+
+    }
+    
+    // resets the users selection so nothing is displayed
+    func resetSelection()
+    {
+        currentSelectedArea.backgroundColor=UIColor.clearColor()
+        currentSelectedArea=nil
+        questions[currentSelectedQuestionIndex].correctButton.backgroundColor=UIColor.clearColor()
+
+    }
+    
+    // for the end of the quiz
+    func endOfQuiz()
+    {
+        
     }
 
 }
