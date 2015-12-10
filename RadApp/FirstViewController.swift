@@ -10,9 +10,13 @@ import UIKit
 
 class FirstViewController: UIViewController {
 	@IBOutlet weak var imageView: UIImageView!
-
 	@IBOutlet weak var labelToggle: UISwitch!
     @IBOutlet var modelSeg: UISegmentedControl!
+	
+	//set default image in huge image view
+	func setDefaultImage() {
+		
+	}
 	
 	//changes picture in imageview on main screen
 	@IBAction func changePicture(sender: AnyObject) {
@@ -96,6 +100,7 @@ class FirstViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
+		changePicture(self)
 	}
 
 	override func didReceiveMemoryWarning() {
