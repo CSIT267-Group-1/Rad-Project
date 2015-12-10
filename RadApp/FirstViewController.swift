@@ -12,6 +12,9 @@ class FirstViewController: UIViewController {
 	@IBOutlet weak var imageView: UIImageView!
 	@IBOutlet weak var labelToggle: UISwitch!
     @IBOutlet var modelSeg: UISegmentedControl!
+	var firstName: String!
+	var lastName: String!
+	var studentID: Int!
 	
 	//set default image in huge image view
 	func setDefaultImage() {
@@ -96,6 +99,31 @@ class FirstViewController: UIViewController {
 		alertController.addAction(noAction)
 		presentViewController(alertController, animated: true, completion: nil)
     }
+	
+	func pleaseLogin() {
+		//alert for login
+		let alertController = UIAlertController(title: "Please login", message: "Please enter the appropriate information", preferredStyle: UIAlertControllerStyle.Alert)
+		alertController.addTextFieldWithConfigurationHandler({(firstNameField: UITextField!) in
+			firstNameField.placeholder = "First name"
+		})
+		alertController.addTextFieldWithConfigurationHandler({(lastNameField: UITextField!) in
+			lastNameField.placeholder = "Last name"
+		})
+		alertController.addTextFieldWithConfigurationHandler({(studentIDField: UITextField!) in
+			studentIDField.placeholder = "Student ID #"
+			studentIDField.keyboardType = UIKeyboardType.NumberPad
+		})
+		alertController.addAction(UIAlertAction(title: "Submit", style: UIAlertActionStyle.Default, handler: {(alertAction: UIAlertAction!) in
+			self.firstName = alertController.textFields![0].text! as String
+			self.lastName = alertController.textFields![1].text! as String
+			self.studentID = Int(alertController.textFields![2].text! as String)!
+		}))
+		self.presentViewController(alertController, animated: true, completion: nil)
+	}
+	
+	override func viewDidAppear(animated: Bool) {
+		pleaseLogin()
+	}
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()

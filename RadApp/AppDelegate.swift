@@ -11,36 +11,10 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 	var window: UIWindow?
-	var firstName: String = "John"
-	var lastName: String = "Doe"
-	var studentID: Int = 0
 	
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 		// Override point for customization after application launch.
 		return true
-	}
-
-	func applicationDidFinishLaunching(application: UIApplication) {
-		dispatch_async(dispatch_get_main_queue(), {
-			//alert for login
-			let alertController = UIAlertController(title: "Please login", message: "Please enter the appropriate information", preferredStyle: UIAlertControllerStyle.Alert)
-			alertController.addTextFieldWithConfigurationHandler({(firstNameField: UITextField!) in
-				firstNameField.placeholder = "First name"
-			})
-			alertController.addTextFieldWithConfigurationHandler({(lastNameField: UITextField!) in
-				lastNameField.placeholder = "Last name"
-			})
-			alertController.addTextFieldWithConfigurationHandler({(studentIDField: UITextField!) in
-				studentIDField.placeholder = "Student ID #"
-				studentIDField.keyboardType = UIKeyboardType.NumberPad
-			})
-			alertController.addAction(UIAlertAction(title: "Submit", style: UIAlertActionStyle.Default, handler: {(alertAction: UIAlertAction!) in
-				self.firstName = alertController.textFields![0].text! as String
-				self.lastName = alertController.textFields![1].text! as String
-				self.studentID = Int(alertController.textFields![2].text! as String)!
-			}))
-			self.window?.rootViewController?.presentViewController(alertController, animated: true, completion: nil)
-		})
 	}
 	
 	func applicationWillResignActive(application: UIApplication) {
