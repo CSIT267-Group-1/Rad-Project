@@ -9,34 +9,88 @@
 import UIKit
 
 class FirstViewController: UIViewController {
+	@IBOutlet weak var imageView: UIImageView!
 
+	@IBOutlet weak var labelToggle: UISwitch!
     @IBOutlet var modelSeg: UISegmentedControl!
-    
-    @IBAction func determineQuiz(sender: AnyObject) {
-        let segSelection: Int = modelSeg.selectedSegmentIndex
-        let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+	
+	//changes picture in imageview on main screen
+	@IBAction func changePicture(sender: AnyObject) {
+		let segSelection: Int = modelSeg.selectedSegmentIndex
+		switch (segSelection)
+		{
+		case 0:
+			if(labelToggle.on) {
+				imageView.image = UIImage(named: "apenemalabels.jpg")
+			}
+			else {
+				imageView.image = UIImage(named: "apenema.jpg")
+			}
+		case 1:
+			if(labelToggle.on) {
+				imageView.image = UIImage(named: "paenemalabels.jpg")
+			}
+			else {
+				imageView.image = UIImage(named: "paenema.jpg")
+			}
+		case 2:
+			if(labelToggle.on) {
+				imageView.image = UIImage(named: "lldenemalabels.jpg")
+			}
+			else {
+				imageView.image = UIImage(named: "lldenema.jpg")
+			}
+		case 3:
+			if(labelToggle.on) {
+				imageView.image = UIImage(named: "rldenemalabels.jpg")
+			}
+			else {
+				imageView.image = UIImage(named: "rldenema.jpg")
+			}
+		default:
+			NSLog("Failed to start quiz")
+		}
 
-        switch (segSelection)
-        {
-        case 0:
-            let editorVC = mainStoryBoard.instantiateViewControllerWithIdentifier("QuizAP")
-            editorVC.modalTransitionStyle = UIModalTransitionStyle.CoverVertical
-            presentViewController(editorVC, animated: true, completion: nil)
-        case 1:
-            let editorVC = mainStoryBoard.instantiateViewControllerWithIdentifier("QuizPA")
-            editorVC.modalTransitionStyle = UIModalTransitionStyle.CoverVertical
-            presentViewController(editorVC, animated: true, completion: nil)
-        case 2:
-            let editorVC = mainStoryBoard.instantiateViewControllerWithIdentifier("QuizLLD")
-            editorVC.modalTransitionStyle = UIModalTransitionStyle.CoverVertical
-            presentViewController(editorVC, animated: true, completion: nil)
-        case 3:
-            let editorVC = mainStoryBoard.instantiateViewControllerWithIdentifier("QuizRLD")
-            editorVC.modalTransitionStyle = UIModalTransitionStyle.CoverVertical
-            presentViewController(editorVC, animated: true, completion: nil)
-        default:
-            print("Failed to start quiz")
-        }
+	}
+	
+	//determines quiz to call via segment control's currently selected index
+	func quizCaller() {
+		let segSelection: Int = modelSeg.selectedSegmentIndex
+		let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+		
+		switch (segSelection)
+		{
+		case 0:
+			let editorVC = mainStoryBoard.instantiateViewControllerWithIdentifier("QuizAP")
+			editorVC.modalTransitionStyle = UIModalTransitionStyle.CoverVertical
+			presentViewController(editorVC, animated: true, completion: nil)
+		case 1:
+			let editorVC = mainStoryBoard.instantiateViewControllerWithIdentifier("QuizPA")
+			editorVC.modalTransitionStyle = UIModalTransitionStyle.CoverVertical
+			presentViewController(editorVC, animated: true, completion: nil)
+		case 2:
+			let editorVC = mainStoryBoard.instantiateViewControllerWithIdentifier("QuizLLD")
+			editorVC.modalTransitionStyle = UIModalTransitionStyle.CoverVertical
+			presentViewController(editorVC, animated: true, completion: nil)
+		case 3:
+			let editorVC = mainStoryBoard.instantiateViewControllerWithIdentifier("QuizRLD")
+			editorVC.modalTransitionStyle = UIModalTransitionStyle.CoverVertical
+			presentViewController(editorVC, animated: true, completion: nil)
+		default:
+			print("Failed to start quiz")
+		}
+	}
+	
+	//confirms user would like to take quiz
+    @IBAction func determineQuiz(sender: AnyObject) {
+		let alertController = UIAlertController(title: "Please confirm", message: "Are you sure you want to take this quiz? You can't leave the quiz once you start.", preferredStyle: UIAlertControllerStyle.Alert)
+		let yesAction = UIAlertAction(title: "Yes", style: UIAlertActionStyle.Default, handler: {(alertAction: UIAlertAction) in
+				self.quizCaller()
+			})
+		let noAction = UIAlertAction(title: "No", style: UIAlertActionStyle.Cancel, handler: nil)
+		alertController.addAction(yesAction)
+		alertController.addAction(noAction)
+		presentViewController(alertController, animated: true, completion: nil)
     }
 	
 	override func viewDidLoad() {
