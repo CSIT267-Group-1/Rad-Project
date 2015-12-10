@@ -97,6 +97,10 @@ class FirstViewController: UIViewController {
     }
 	
 	func pleaseLogin() {
+		let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+		let loginVC = mainStoryBoard.instantiateViewControllerWithIdentifier("Login")
+		loginVC.modalPresentationStyle = UIModalPresentationStyle.FormSheet
+		presentViewController(loginVC, animated: true, completion: nil)
 		//transfer to view controller for login
 		/*//alert for login
 		let alertController = UIAlertController(title: "Please login", message: "Please enter the appropriate information", preferredStyle: UIAlertControllerStyle.Alert)
@@ -149,7 +153,5 @@ class FirstViewController: UIViewController {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}
-
-
 }
 

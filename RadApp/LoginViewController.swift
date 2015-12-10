@@ -9,6 +9,13 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+	@IBOutlet weak var firstNameField: UITextField!
+	@IBOutlet weak var lastNameField: UITextField!
+	@IBOutlet weak var studentIDField: UITextField!
+	@IBOutlet weak var submitButton: UIButton!
+	var firstName: String!
+	var lastName: String!
+	var studentID: Int!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +27,27 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+	
+	func checkLogin() {
+		if(firstNameField.text == "" || lastNameField.text == "" || studentIDField.text == "") {
+			let errorController = UIAlertController(title: "Error!", message: "Please enter your information in every field", preferredStyle: UIAlertControllerStyle.Alert)
+			errorController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Destructive, handler: nil))
+			self.presentViewController(errorController, animated: true, completion: nil)
+		}
+		else {
+			self.firstName = firstNameField.text as String
+			self.lastName = lastNameField.text as String
+			if(Int(studentIDField.text) == nil) {
+				let errorController = UIAlertController(title: "Error!", message: "Please enter only numbers in the \"Student ID #\" field", preferredStyle: UIAlertControllerStyle.Alert)
+				errorController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Destructive, handler: nil))
+				self.presentViewController(errorController, animated: true, completion: nil)
+			}
+			else {
+				self.studentID = Int(alertController.textFields![2].text! as String)!
+			}
+			self.didFinishLogin = true
+		}
+	}
 
     /*
     // MARK: - Navigation
@@ -31,5 +58,8 @@ class LoginViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+	
+	@IBAction func dismiss(sender: AnyObject) {
+		dismissViewControllerAnimated(true, completion: nil)
+	}
 }
