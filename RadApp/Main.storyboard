@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9pv-A4-QxB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9pv-A4-QxB">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--Model-->
@@ -18,13 +18,11 @@
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7mo-bL-yEv">
                                 <rect key="frame" x="0.0" y="724" width="1024" height="44"/>
-                                <animations/>
                                 <items>
                                     <barButtonItem style="plain" id="LUe-gX-EEG">
                                         <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="DjD-eX-rco">
-                                            <rect key="frame" x="20" y="7" width="51" height="31"/>
+                                            <rect key="frame" x="20" y="6.5" width="51" height="31"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <animations/>
                                             <connections>
                                                 <action selector="changePicture:" destination="9pv-A4-QxB" eventType="valueChanged" id="VLb-LZ-ucK"/>
                                             </connections>
@@ -51,7 +49,6 @@
                                         <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="xXT-Zy-2H4">
                                             <rect key="frame" x="678" y="7" width="326" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <animations/>
                                             <segments>
                                                 <segment title="AP"/>
                                                 <segment title="PA"/>
@@ -70,14 +67,11 @@
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0YV-ty-1g9">
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="724"/>
-                                        <animations/>
                                     </imageView>
                                 </subviews>
-                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -109,7 +103,6 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="#10:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pq4-tO-Lkr">
                                         <rect key="frame" x="17" y="8" width="33" height="21"/>
-                                        <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -119,7 +112,6 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vaB-qP-GDB">
                                                 <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
-                                                <animations/>
                                                 <state key="normal" title="Button"/>
                                                 <connections>
                                                     <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="IoG-Ju-gAz"/>
@@ -127,7 +119,6 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="We9-We-YP1">
                                                 <rect key="frame" x="146" y="0.0" width="46" height="30"/>
-                                                <animations/>
                                                 <state key="normal" title="Button"/>
                                                 <connections>
                                                     <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="g2q-61-9gg"/>
@@ -135,7 +126,6 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pAr-tF-jLW">
                                                 <rect key="frame" x="292" y="0.0" width="46" height="30"/>
-                                                <animations/>
                                                 <state key="normal" title="Button"/>
                                                 <connections>
                                                     <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="EZH-Ud-Iou"/>
@@ -143,18 +133,15 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vut-d2-ozj">
                                                 <rect key="frame" x="438" y="0.0" width="46" height="30"/>
-                                                <animations/>
                                                 <state key="normal" title="Button"/>
                                                 <connections>
                                                     <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="7dr-gz-voz"/>
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <animations/>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wli-m2-vqI">
                                         <rect key="frame" x="957" y="47" width="49" height="30"/>
-                                        <animations/>
                                         <state key="normal" title="Submit"/>
                                         <connections>
                                             <action selector="submit:" destination="5qi-rO-OaG" eventType="touchUpInside" id="6Kx-tc-VLU"/>
@@ -162,22 +149,18 @@
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The transverse colon on a PA view of a barium enema should be ___________ filled?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mh-mP-wMZ">
                                         <rect key="frame" x="58" y="8" width="948" height="21"/>
-                                        <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <animations/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="paenema" translatesAutoresizingMaskIntoConstraints="NO" id="DLI-Ht-ARP">
                                 <rect key="frame" x="0.0" y="49" width="1024" height="610"/>
-                                <animations/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9vf-kk-fYT">
                                 <rect key="frame" x="950" y="645" width="54" height="30"/>
-                                <animations/>
                                 <state key="normal" title="Dismiss"/>
                                 <connections>
                                     <action selector="dismissQuiz:" destination="5qi-rO-OaG" eventType="touchUpInside" id="X34-Sd-Hbk"/>
@@ -185,7 +168,6 @@
                             </button>
                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mVR-vj-2K5" userLabel="Hepatic Flexure">
                                 <rect key="frame" x="304" y="190" width="85" height="125"/>
-                                <animations/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Hepatic Flexure">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -196,7 +178,6 @@
                             </button>
                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ux9-5n-9MV" userLabel="Splenic Flexure">
                                 <rect key="frame" x="622" y="76" width="108" height="103"/>
-                                <animations/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Splenic Flexure">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -207,7 +188,6 @@
                             </button>
                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUg-4U-4IO" userLabel="Sigmoid">
                                 <rect key="frame" x="424" y="529" width="191" height="130"/>
-                                <animations/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Sigmoid">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -218,7 +198,6 @@
                             </button>
                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="SXG-XD-RFh" userLabel="Descending Colon">
                                 <rect key="frame" x="617" y="205" width="97" height="231"/>
-                                <animations/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="Descending Colon">
@@ -230,7 +209,6 @@
                             </button>
                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbx-72-7b0" userLabel="Ascending Colon">
                                 <rect key="frame" x="304" y="328" width="101" height="164"/>
-                                <animations/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Ascending Colon">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -241,14 +219,12 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PA Quiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8b-k6-s7X">
                                 <rect key="frame" x="418" y="20" width="159" height="21"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zjU-N7-pU5" userLabel="Transverse Colon">
                                 <rect key="frame" x="413" y="275" width="187" height="92"/>
-                                <animations/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Transverse Colon">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -258,7 +234,6 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -300,37 +275,31 @@
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lldenema" translatesAutoresizingMaskIntoConstraints="NO" id="5Zs-iV-AwX">
                                         <rect key="frame" x="0.0" y="49" width="1024" height="636"/>
-                                        <animations/>
                                     </imageView>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cFj-Gh-GkB">
                                         <rect key="frame" x="0.0" y="683" width="1024" height="85"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="#1:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOg-CE-D2h">
                                                 <rect key="frame" x="8" y="32" width="23" height="21"/>
-                                                <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The transverse colon on a PA view of a barium enema should be ___________ filled?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2aG-3F-jIV">
                                                 <rect key="frame" x="39" y="32" width="891" height="21"/>
-                                                <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lNr-y9-b5L">
                                                 <rect key="frame" x="950" y="28" width="49" height="30"/>
-                                                <animations/>
                                                 <state key="normal" title="Submit"/>
                                             </button>
                                         </subviews>
-                                        <animations/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lMx-Jq-4pZ">
                                         <rect key="frame" x="950" y="645" width="54" height="30"/>
-                                        <animations/>
                                         <state key="normal" title="Dismiss"/>
                                         <connections>
                                             <action selector="dismiss:" destination="cas-GZ-zai" eventType="touchUpInside" id="Qor-5e-42w"/>
@@ -339,7 +308,6 @@
                                     </button>
                                     <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="82S-eR-d95" userLabel="Hepatic Flexure">
                                         <rect key="frame" x="281" y="214" width="124" height="88"/>
-                                        <animations/>
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal">
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -347,7 +315,6 @@
                                     </button>
                                     <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4g3-Nz-22m" userLabel="Transverse Colon">
                                         <rect key="frame" x="435" y="281" width="124" height="102"/>
-                                        <animations/>
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal">
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -355,7 +322,6 @@
                                     </button>
                                     <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zao-Uq-xw4" userLabel="Splenic Flexure">
                                         <rect key="frame" x="622" y="96" width="120" height="83"/>
-                                        <animations/>
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal">
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -363,7 +329,6 @@
                                     </button>
                                     <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DiE-ak-kCC" userLabel="Sigmoid">
                                         <rect key="frame" x="472" y="605" width="95" height="70"/>
-                                        <animations/>
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal">
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -371,7 +336,6 @@
                                     </button>
                                     <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="WUA-L6-G5B" userLabel="Descending Colon">
                                         <rect key="frame" x="604" y="281" width="126" height="101"/>
-                                        <animations/>
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                         <state key="normal">
@@ -380,7 +344,6 @@
                                     </button>
                                     <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lwh-c8-p6w" userLabel="Ascending Colon">
                                         <rect key="frame" x="288" y="387" width="117" height="105"/>
-                                        <animations/>
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal">
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -388,17 +351,14 @@
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Left Lateral Decubitus  Quiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8r-7h-tcx">
                                         <rect key="frame" x="392" y="20" width="212" height="21"/>
-                                        <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <animations/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -428,30 +388,25 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="#1:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J71-F9-BWt">
                                                 <rect key="frame" x="8" y="32" width="23" height="21"/>
-                                                <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The transverse colon on a PA view of a barium enema should be ___________ filled?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cu5-gQ-Y3n">
                                                 <rect key="frame" x="39" y="32" width="891" height="21"/>
-                                                <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAV-g9-3zj">
                                                 <rect key="frame" x="950" y="28" width="49" height="30"/>
-                                                <animations/>
                                                 <state key="normal" title="Submit"/>
                                             </button>
                                         </subviews>
-                                        <animations/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nSb-Gd-Oax">
                                         <rect key="frame" x="950" y="645" width="54" height="30"/>
-                                        <animations/>
                                         <state key="normal" title="Dismiss"/>
                                         <connections>
                                             <action selector="dismiss:" destination="qc2-II-aGp" eventType="touchUpInside" id="WiN-YR-PpT"/>
@@ -460,35 +415,30 @@
                                     </button>
                                     <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CAU-zi-bzc" userLabel="Hepatic Flexure">
                                         <rect key="frame" x="281" y="214" width="124" height="88"/>
-                                        <animations/>
                                         <state key="normal">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UuZ-hN-ueg" userLabel="Transverse Colon">
                                         <rect key="frame" x="435" y="281" width="124" height="102"/>
-                                        <animations/>
                                         <state key="normal">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJY-Jn-6Hf" userLabel="Splenic Flexure">
                                         <rect key="frame" x="622" y="96" width="120" height="83"/>
-                                        <animations/>
                                         <state key="normal">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40J-lI-DxN" userLabel="Sigmoid">
                                         <rect key="frame" x="472" y="605" width="95" height="70"/>
-                                        <animations/>
                                         <state key="normal">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="CT6-1F-qC0" userLabel="Descending Colon">
                                         <rect key="frame" x="604" y="281" width="126" height="101"/>
-                                        <animations/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                         <state key="normal">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -496,28 +446,23 @@
                                     </button>
                                     <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jtc-9D-DL5" userLabel="Ascending Colon">
                                         <rect key="frame" x="288" y="387" width="117" height="105"/>
-                                        <animations/>
                                         <state key="normal">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         </state>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Right Lateral Decubitus Quiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ri0-ZH-DVZ">
                                         <rect key="frame" x="389" y="20" width="218" height="21"/>
-                                        <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rldenema" translatesAutoresizingMaskIntoConstraints="NO" id="VBE-1m-ctA">
                                         <rect key="frame" x="0.0" y="49" width="1024" height="636"/>
-                                        <animations/>
                                     </imageView>
                                 </subviews>
-                                <animations/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -544,21 +489,18 @@
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="apenema" translatesAutoresizingMaskIntoConstraints="NO" id="3SL-bO-rLZ">
                                         <rect key="frame" x="0.0" y="66" width="1024" height="636"/>
-                                        <animations/>
                                     </imageView>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pBC-c7-wwV">
                                         <rect key="frame" x="0.0" y="683" width="1024" height="85"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="#10:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iTV-5m-gwj">
                                                 <rect key="frame" x="21" y="8" width="33" height="21"/>
-                                                <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2jB-Je-sfr">
                                                 <rect key="frame" x="950" y="47" width="49" height="30"/>
-                                                <animations/>
                                                 <state key="normal" title="Submit"/>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="ejD-U9-oai">
@@ -566,7 +508,6 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Lm-pf-O0F">
                                                         <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
-                                                        <animations/>
                                                         <state key="normal" title="Button"/>
                                                         <connections>
                                                             <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="TO7-3E-cJO"/>
@@ -574,7 +515,6 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ilk-wE-ih5">
                                                         <rect key="frame" x="146" y="0.0" width="46" height="30"/>
-                                                        <animations/>
                                                         <state key="normal" title="Button"/>
                                                         <connections>
                                                             <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="pgn-lt-Dp9"/>
@@ -582,7 +522,6 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Wk-Y7-ixW">
                                                         <rect key="frame" x="292" y="0.0" width="46" height="30"/>
-                                                        <animations/>
                                                         <state key="normal" title="Button"/>
                                                         <connections>
                                                             <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="QuD-v3-NeW"/>
@@ -590,29 +529,24 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HRB-sV-kZN">
                                                         <rect key="frame" x="438" y="0.0" width="46" height="30"/>
-                                                        <animations/>
                                                         <state key="normal" title="Button"/>
                                                         <connections>
                                                             <action selector="locationSelected:" destination="5qi-rO-OaG" eventType="touchUpInside" id="Hzg-8Y-Bkq"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
-                                                <animations/>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The transverse colon on a PA view of a barium enema should be ___________ filled?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d7t-TG-w0z">
                                                 <rect key="frame" x="62" y="8" width="937" height="21"/>
-                                                <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <animations/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qTn-Wv-5Cs">
                                         <rect key="frame" x="950" y="645" width="54" height="30"/>
-                                        <animations/>
                                         <state key="normal" title="Dismiss"/>
                                         <connections>
                                             <action selector="dismissQuiz:" destination="5qi-rO-OaG" eventType="touchUpInside" id="Imu-3G-NTB"/>
@@ -621,7 +555,6 @@
                                     </button>
                                     <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyb-Fj-pEz" userLabel="Hepatic Flexure">
                                         <rect key="frame" x="338" y="225" width="113" height="88"/>
-                                        <animations/>
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Hepatic Flexture">
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -629,7 +562,6 @@
                                     </button>
                                     <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3D-gI-Mnx" userLabel="Splenic Flexure">
                                         <rect key="frame" x="622" y="96" width="87" height="128"/>
-                                        <animations/>
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Splenic Flexure">
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -637,7 +569,6 @@
                                     </button>
                                     <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQt-au-htu" userLabel="Sigmoid">
                                         <rect key="frame" x="456" y="492" width="145" height="115"/>
-                                        <animations/>
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Sigmoid">
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -645,7 +576,6 @@
                                     </button>
                                     <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="cTP-nC-wle" userLabel="Descending Colon">
                                         <rect key="frame" x="633" y="247" width="65" height="245"/>
-                                        <animations/>
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                         <state key="normal" title="Descending Colon">
@@ -654,7 +584,6 @@
                                     </button>
                                     <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wg3-O4-sBD" userLabel="Ascending Colon">
                                         <rect key="frame" x="331" y="317" width="117" height="204"/>
-                                        <animations/>
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Ascending Colon">
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -662,25 +591,21 @@
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Anteroposterior Quiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQR-T8-yff">
                                         <rect key="frame" x="418" y="20" width="160" height="21"/>
-                                        <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R0K-eb-LEe" userLabel="Transverse Colon">
                                         <rect key="frame" x="456" y="247" width="158" height="102"/>
-                                        <animations/>
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Transverse Colon">
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
                                 </subviews>
-                                <animations/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -704,45 +629,39 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fu2-qw-mhH">
                                 <rect key="frame" x="466" y="20" width="92" height="21"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hB2-oj-NHv">
                                 <rect key="frame" x="412" y="87" width="200" height="30"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Student ID #" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lKG-ul-vZX">
                                 <rect key="frame" x="412" y="125" width="200" height="30"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="done"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X5Y-Kf-0p5">
                                 <rect key="frame" x="488" y="163" width="49" height="30"/>
-                                <animations/>
                                 <state key="normal" title="Submit"/>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1cw-Z9-VBh">
                                 <rect key="frame" x="412" y="49" width="200" height="30"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
                             </textField>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
-                        <outlet property="firstNameField" destination="1cw-Z9-VBh" id="VMz-SH-oL3"/>
-                        <outlet property="lastNameField" destination="hB2-oj-NHv" id="omB-qY-WAc"/>
-                        <outlet property="studentIDField" destination="lKG-ul-vZX" id="hhz-Kx-zJw"/>
-                        <outlet property="submitButton" destination="X5Y-Kf-0p5" id="wXS-iC-IDR"/>
+                        <outlet property="firstNameField" destination="1cw-Z9-VBh" id="GoU-KJ-Wnh"/>
+                        <outlet property="lastNameField" destination="hB2-oj-NHv" id="3eR-SI-iaM"/>
+                        <outlet property="studentIDField" destination="lKG-ul-vZX" id="7vg-BQ-2ZN"/>
+                        <outlet property="submitButton" destination="X5Y-Kf-0p5" id="rIm-ld-2Eu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DCW-0A-GL9" userLabel="First Responder" sceneMemberID="firstResponder"/>

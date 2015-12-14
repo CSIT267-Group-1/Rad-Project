@@ -15,6 +15,7 @@ class FirstViewController: UIViewController {
 	var firstName: String!
 	var lastName: String!
 	var studentID: Int!
+	var loginViewController: LoginViewController = LoginViewController(nibName: nil, bundle: nil)
 	var didFinishLogin: Bool = false
 	
     
@@ -107,6 +108,7 @@ class FirstViewController: UIViewController {
 		let loginVC = mainStoryBoard.instantiateViewControllerWithIdentifier("Login")
 		loginVC.modalPresentationStyle = UIModalPresentationStyle.FormSheet
 		presentViewController(loginVC, animated: true, completion: nil)
+		didFinishLogin = loginViewController.checkLogin()
 		//transfer to view controller for login
 		/*//alert for login
 		let alertController = UIAlertController(title: "Please login", message: "Please enter the appropriate information", preferredStyle: UIAlertControllerStyle.Alert)
@@ -145,7 +147,7 @@ class FirstViewController: UIViewController {
 	
 	override func viewDidAppear(animated: Bool) {
 		if(!didFinishLogin) {
-			//pleaseLogin()
+			didFinishLogin = loginViewController.checkLogin()
 		}
 	}
 	
