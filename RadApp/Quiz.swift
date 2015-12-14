@@ -26,8 +26,9 @@ class Quiz
     var correct: Bool!
     var correctStr: String!
     var userAnswer: String!
+    var bariumQues: Bool!
     
-    init (question: String, hasMultipleChoice: Bool, correctButton: UIButton, buttonArray: [String]?)
+    init (question: String, hasMultipleChoice: Bool, correctButton: UIButton, buttonArray: [String]?, bariumQuestion: Bool)
     {
         self.question=question
         self.hasMultipleChoice=hasMultipleChoice
@@ -35,6 +36,7 @@ class Quiz
         correct = false
         correctStr = ""
         userAnswer = ""
+        bariumQues=bariumQuestion
         
         if (buttonArray != nil)
         {

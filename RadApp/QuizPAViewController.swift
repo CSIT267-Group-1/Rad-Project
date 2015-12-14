@@ -98,20 +98,20 @@ class QuizPAViewController: UIViewController {
     {
         var multipleChoiceArray: [String] // used to store multiple choice buton titles
 
-        questions.append(Quiz(question: "What is the location of the splenic flexure on a PA view of a barium enema?", hasMultipleChoice: false, correctButton: spleFlex, buttonArray: nil))
-        questions.append(Quiz(question: "What is the location of the hepatic flexure on a PA view of a barium enema?", hasMultipleChoice: false, correctButton: hepFelx, buttonArray: nil))
-        questions.append(Quiz(question: "What is the location of the descending colon on a PA view of a barium enema?", hasMultipleChoice: false, correctButton: descCol, buttonArray: nil))
-        questions.append(Quiz(question: "What is the location of the ascending colon on a PA view of a barium enema?", hasMultipleChoice: false, correctButton: ascCol, buttonArray: nil))
-        questions.append(Quiz(question: "What is the location of the transverse colon on a PA view of a barium enema?", hasMultipleChoice: false, correctButton: tranCol, buttonArray: nil))
+        questions.append(Quiz(question: "What is the location of the splenic flexure on a PA view of a barium enema?", hasMultipleChoice: false, correctButton: spleFlex, buttonArray: nil, bariumQuestion: false))
+        questions.append(Quiz(question: "What is the location of the hepatic flexure on a PA view of a barium enema?", hasMultipleChoice: false, correctButton: hepFelx, buttonArray: nil, bariumQuestion: false))
+        questions.append(Quiz(question: "What is the location of the descending colon on a PA view of a barium enema?", hasMultipleChoice: false, correctButton: descCol, buttonArray: nil, bariumQuestion: false))
+        questions.append(Quiz(question: "What is the location of the ascending colon on a PA view of a barium enema?", hasMultipleChoice: false, correctButton: ascCol, buttonArray: nil, bariumQuestion: false))
+        questions.append(Quiz(question: "What is the location of the transverse colon on a PA view of a barium enema?", hasMultipleChoice: false, correctButton: tranCol, buttonArray: nil, bariumQuestion: false))
         
         multipleChoiceArray = ["Air", "Barium", "Both air and Barium", "Nothing"]
-        questions.append(Quiz(question: "In a PA view of a barium enema, Is the transverse colon filled with ______________?", hasMultipleChoice: true, correctButton: multipleChoiceButtonB, buttonArray: multipleChoiceArray))
+        questions.append(Quiz(question: "In a PA view of a barium enema, Is the transverse colon filled with ______________?", hasMultipleChoice: true, correctButton: multipleChoiceButtonB, buttonArray: multipleChoiceArray, bariumQuestion: false))
         
         multipleChoiceArray = ["Ascending Colon", "Descending Colon", "Sigmoid Colon", "Transverse Colon"]
-        questions.append(Quiz(question: "In a PA axial oblique (RAO) projection of a barium enema view, what is the anatomy that is being best demonstrated?", hasMultipleChoice: true, correctButton: multipleChoiceButtonC, buttonArray: multipleChoiceArray))
+        questions.append(Quiz(question: "In a PA axial oblique (RAO) projection of a barium enema view, what is the anatomy that is being best demonstrated?", hasMultipleChoice: true, correctButton: multipleChoiceButtonC, buttonArray: multipleChoiceArray, bariumQuestion: false))
         
         multipleChoiceArray = ["Ascending Colon", "Descending Colon", "Sigmoid Colon", "Transverse Colon"]
-        questions.append(Quiz(question: "In a PA axial projection of a barium enema view, what is the anatomy that is being best demonstrated?", hasMultipleChoice: true, correctButton: multipleChoiceButtonC, buttonArray: multipleChoiceArray))
+        questions.append(Quiz(question: "In a PA axial projection of a barium enema view, what is the anatomy that is being best demonstrated?", hasMultipleChoice: true, correctButton: multipleChoiceButtonC, buttonArray: multipleChoiceArray, bariumQuestion: false))
         
         // Makes the questions random
         shuffleQuestions()

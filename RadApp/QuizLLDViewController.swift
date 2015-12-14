@@ -28,6 +28,14 @@ class QuizLLDViewController: UIViewController {
     @IBOutlet var multipleChoiceButtonC: UIButton!
     @IBOutlet var multipleChoiceButtonD: UIButton!
     @IBOutlet var multipleChoiceView: UIStackView!
+    @IBOutlet var bariumAscCol: UIButton!
+    @IBOutlet var airAscCol: UIButton!
+    @IBOutlet var airTranCol: UIButton!
+    @IBOutlet var bariumTranCol: UIButton!
+    @IBOutlet var airDescCol: UIButton!
+    @IBOutlet var bariumDescCol: UIButton!
+    @IBOutlet var bariumSigmoid: UIButton!
+    @IBOutlet var airSigmoid: UIButton!
     
     var questions: [Quiz] = [Quiz]()
     
@@ -98,23 +106,23 @@ class QuizLLDViewController: UIViewController {
     {
         var multipleChoiceArray: [String] // used to store multiple choice buton titles
         
-        questions.append(Quiz(question: "In an AP axial projection of a barium enema view, what is the anatomy that is being best demonstrated?", hasMultipleChoice: false, correctButton: sigmoid, buttonArray: nil))
-        questions.append(Quiz(question: "In an AP axial oblique (LPO) projection of a barium enema view, what is the anatomy that is being best demonstrated?", hasMultipleChoice: false, correctButton: sigmoid, buttonArray: nil))
-        questions.append(Quiz(question: "What is the location of the transverse colon on an AP view of a barium enema?", hasMultipleChoice: false, correctButton: tranCol, buttonArray: nil))
-        questions.append(Quiz(question: "What is the location of the ascending colon on an AP view of a barium enema?", hasMultipleChoice: false, correctButton: ascCol, buttonArray: nil))
-        questions.append(Quiz(question: "What is the location of the descending colon on an AP view of a barium enema?", hasMultipleChoice: false, correctButton: descCol, buttonArray: nil))
-        questions.append(Quiz(question: "What is the location of the hepatic flexure on an AP view of a barium enema?", hasMultipleChoice: false, correctButton: hepFelx, buttonArray: nil))
-        questions.append(Quiz(question: "What is the location of the splenic flexure on an AP view of a barium enema?", hasMultipleChoice: false, correctButton: spleFlex, buttonArray: nil))
+        questions.append(Quiz(question: "In an AP axial projection of a barium enema view, what is the anatomy that is being best demonstrated?", hasMultipleChoice: false, correctButton: sigmoid, buttonArray: nil, bariumQuestion: false))
+        questions.append(Quiz(question: "In an AP axial oblique (LPO) projection of a barium enema view, what is the anatomy that is being best demonstrated?", hasMultipleChoice: false, correctButton: sigmoid, buttonArray: nil, bariumQuestion: true))
+        questions.append(Quiz(question: "What is the location of the transverse colon on an AP view of a barium enema?", hasMultipleChoice: false, correctButton: tranCol, buttonArray: nil, bariumQuestion: true))
+        questions.append(Quiz(question: "What is the location of the ascending colon on an AP view of a barium enema?", hasMultipleChoice: false, correctButton: ascCol, buttonArray: nil, bariumQuestion: true))
+        questions.append(Quiz(question: "What is the location of the descending colon on an AP view of a barium enema?", hasMultipleChoice: false, correctButton: descCol, buttonArray: nil, bariumQuestion: true))
+        questions.append(Quiz(question: "What is the location of the hepatic flexure on an AP view of a barium enema?", hasMultipleChoice: false, correctButton: hepFelx, buttonArray: nil, bariumQuestion: true))
+        questions.append(Quiz(question: "What is the location of the splenic flexure on an AP view of a barium enema?", hasMultipleChoice: false, correctButton: spleFlex, buttonArray: nil, bariumQuestion: true))
         
         multipleChoiceArray = ["Right colic flexure and the ascending colon", "Left colic flexure and the descending colon are seen open", "Left colic flexure and the descending colon are seen closed", "Right colic flexure and the descending colon are closed"]
-        questions.append(Quiz(question: "What anatomy needs to be included in the LAO (left anterior oblique) view of a barium enema?", hasMultipleChoice: true, correctButton: multipleChoiceButtonB, buttonArray: multipleChoiceArray))
+        questions.append(Quiz(question: "What anatomy needs to be included in the LAO (left anterior oblique) view of a barium enema?", hasMultipleChoice: true, correctButton: multipleChoiceButtonB, buttonArray: multipleChoiceArray, bariumQuestion: true))
         
         multipleChoiceArray = ["Right hepatic flexure", "Left splenic flexure", "Transverse flexure", "Lateral flexure"]
-        questions.append(Quiz(question: "In the LAO (left anterior oblique) of a barium enema view which flexure is of interest?", hasMultipleChoice: true, correctButton: multipleChoiceButtonA, buttonArray: multipleChoiceArray))
+        questions.append(Quiz(question: "In the LAO (left anterior oblique) of a, barium enema view which flexure is of interest?", hasMultipleChoice: true, correctButton: multipleChoiceButtonA, buttonArray: multipleChoiceArray, bariumQuestion: true))
         
         
         // Makes the questions random
-        shuffleQuestions()
+        //shuffleQuestions()
     }
     
     func shuffleQuestions()
@@ -155,7 +163,20 @@ class QuizLLDViewController: UIViewController {
         }
         else
         {
+           // need to fix
+            //************************************
             multipleChoiceView.hidden=true
+        }
+        
+        if questions[currentSelectedQuestionIndex].bariumQues == true
+        {
+            displayBariumButtons(true)
+            displayLableButtons(false)
+        }
+        else
+        {
+            displayLableButtons(true)
+            displayBariumButtons(false)
         }
     }
     
@@ -259,5 +280,29 @@ class QuizLLDViewController: UIViewController {
     {
         //TESTING
         dismissQuiz(nil)
+    }
+    
+    func displayBariumButtons(boolean: Bool)
+    {
+        let bool = !boolean
+        bariumAscCol.hidden=bool
+        bariumDescCol.hidden=bool
+        bariumSigmoid.hidden=bool
+        bariumTranCol.hidden=bool
+        airAscCol.hidden=bool
+        airDescCol.hidden=bool
+        airSigmoid.hidden=bool
+        airTranCol.hidden=bool
+    }
+    
+    func displayLableButtons(boolean: Bool)
+    {
+        let bool = !boolean
+        descCol.hidden=bool
+        ascCol.hidden=bool
+        tranCol.hidden=bool
+        hepFelx.hidden=bool
+        spleFlex.hidden=bool
+        sigmoid.hidden=bool
     }
 }
