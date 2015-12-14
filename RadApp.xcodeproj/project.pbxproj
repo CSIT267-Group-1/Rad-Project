@@ -110,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				FC14305D1C0D1897003580A7 /* QuizPAViewController.swift */,
+				D65B80501C0CF3E900C3E444 /* Info.plist */,
 				D65B80421C0CF3E900C3E444 /* AppDelegate.swift */,
 				D65B80441C0CF3E900C3E444 /* FirstViewController.swift */,
 				FC14305F1C0D27DA003580A7 /* Main.storyboard */,
@@ -120,7 +121,6 @@
 				D6D156251C0F9ED50035882E /* QuizAPViewController.swift */,
 				FC9577581C18C994001C0897 /* Quiz.swift */,
 				D65B804D1C0CF3E900C3E444 /* LaunchScreen.storyboard */,
-				D65B80501C0CF3E900C3E444 /* Info.plist */,
 			);
 			path = RadApp;
 			sourceTree = "<group>";
