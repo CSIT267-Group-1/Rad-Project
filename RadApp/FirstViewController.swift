@@ -146,9 +146,9 @@ class FirstViewController: UIViewController {
 	}
 	
 	override func viewDidAppear(animated: Bool) {
-		if(!didFinishLogin) {
+		/*if(!didFinishLogin) {
 			didFinishLogin = loginViewController.checkLogin()
-		}
+		}*/
 	}
 	
 	override func viewDidLoad() {
