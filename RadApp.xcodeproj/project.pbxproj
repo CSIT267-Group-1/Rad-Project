@@ -13,6 +13,7 @@
 		D65B805A1C0CF3E900C3E444 /* RadAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65B80591C0CF3E900C3E444 /* RadAppTests.swift */; };
 		D65B80651C0CF3E900C3E444 /* RadAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65B80641C0CF3E900C3E444 /* RadAppUITests.swift */; };
 		D68607511C191884000DED4E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68607501C191884000DED4E /* LoginViewController.swift */; };
+		D6AEE8801C1F6CA100F94036 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6AEE87F1C1F6CA100F94036 /* Assets.xcassets */; };
 		D6D156261C0F9ED50035882E /* QuizAPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D156251C0F9ED50035882E /* QuizAPViewController.swift */; };
 		D6D156281C0F9EE20035882E /* QuizLLDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D156271C0F9EE20035882E /* QuizLLDViewController.swift */; };
 		D6D1562A1C0F9EE90035882E /* QuizRLDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D156291C0F9EE90035882E /* QuizRLDViewController.swift */; };
@@ -51,6 +52,7 @@
 		D65B80641C0CF3E900C3E444 /* RadAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadAppUITests.swift; sourceTree = "<group>"; };
 		D65B80661C0CF3E900C3E444 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D68607501C191884000DED4E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D6AEE87F1C1F6CA100F94036 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6D156251C0F9ED50035882E /* QuizAPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizAPViewController.swift; sourceTree = "<group>"; };
 		D6D156271C0F9EE20035882E /* QuizLLDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizLLDViewController.swift; sourceTree = "<group>"; };
 		D6D156291C0F9EE90035882E /* QuizRLDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizRLDViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				D65B80421C0CF3E900C3E444 /* AppDelegate.swift */,
 				D65B80441C0CF3E900C3E444 /* FirstViewController.swift */,
 				FC14305F1C0D27DA003580A7 /* Main.storyboard */,
+				D6AEE87F1C1F6CA100F94036 /* Assets.xcassets */,
 				D68607501C191884000DED4E /* LoginViewController.swift */,
 				D6D156271C0F9EE20035882E /* QuizLLDViewController.swift */,
 				D6D156291C0F9EE90035882E /* QuizRLDViewController.swift */,
@@ -246,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC1430601C0D27DA003580A7 /* Main.storyboard in Resources */,
+				D6AEE8801C1F6CA100F94036 /* Assets.xcassets in Resources */,
 				D65B804F1C0CF3E900C3E444 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
