@@ -13,9 +13,9 @@ class LoginViewController: UIViewController {
 	@IBOutlet weak var lastNameField: UITextField!
 	@IBOutlet weak var studentIDField: UITextField!
 	@IBOutlet weak var submitButton: UIButton!
-	var firstName: String! = ""
-	var lastName: String! = ""
-	var studentID: Int! = 0
+	var firstName: String!
+	var lastName: String!
+	var studentID: Int!
 
 	override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
 		super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -37,7 +37,7 @@ class LoginViewController: UIViewController {
     }
 
 	func checkLogin() -> Bool {
-		if((firstNameField.hasText() || lastNameField.hasText() || studentIDField.hasText())) {
+		if(firstNameField == nil || lastNameField == nil || studentIDField == nil) {
 			let errorController = UIAlertController(title: "Error!", message: "Please enter your information in every field", preferredStyle: UIAlertControllerStyle.Alert)
 			errorController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Destructive, handler: nil))
 			self.presentViewController(errorController, animated: true, completion: nil)

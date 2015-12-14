@@ -109,40 +109,6 @@ class FirstViewController: UIViewController {
 		loginVC.modalPresentationStyle = UIModalPresentationStyle.FormSheet
 		presentViewController(loginVC, animated: true, completion: nil)
 		didFinishLogin = loginViewController.checkLogin()
-		//transfer to view controller for login
-		/*//alert for login
-		let alertController = UIAlertController(title: "Please login", message: "Please enter the appropriate information", preferredStyle: UIAlertControllerStyle.Alert)
-		alertController.addTextFieldWithConfigurationHandler({(firstNameField: UITextField!) in
-			firstNameField.placeholder = "First name"
-		})
-		alertController.addTextFieldWithConfigurationHandler({(lastNameField: UITextField!) in
-			lastNameField.placeholder = "Last name"
-		})
-		alertController.addTextFieldWithConfigurationHandler({(studentIDField: UITextField!) in
-			studentIDField.placeholder = "Student ID #"
-			studentIDField.keyboardType = UIKeyboardType.PhonePad
-		})
-		alertController.addAction(UIAlertAction(title: "Submit", style: UIAlertActionStyle.Default, handler: {(alertAction: UIAlertAction!) in
-			if(alertController.textFields![0].text! == "" || alertController.textFields![1].text! == "" || alertController.textFields![2].text! == "") {
-				let errorController = UIAlertController(title: "Error!", message: "Please enter your information in every field", preferredStyle: UIAlertControllerStyle.Alert)
-				errorController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Destructive, handler: nil))
-				self.presentViewController(errorController, animated: true, completion: nil)
-			}
-			else {
-				self.firstName = alertController.textFields![0].text! as String
-				self.lastName = alertController.textFields![1].text! as String
-				if(Int(alertController.textFields![2].text!) == nil) {
-					let errorController = UIAlertController(title: "Error!", message: "Please enter only numbers in the \"Student ID #\" field", preferredStyle: UIAlertControllerStyle.Alert)
-					errorController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Destructive, handler: nil))
-					self.presentViewController(errorController, animated: true, completion: nil)
-				}
-				else {
-					self.studentID = Int(alertController.textFields![2].text! as String)!
-				}
-				self.didFinishLogin = true
-			}
-		}))
-		self.presentViewController(alertController, animated: true, completion: nil)*/
 	}
 	
 	override func viewDidAppear(animated: Bool) {
