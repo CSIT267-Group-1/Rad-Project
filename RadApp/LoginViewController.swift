@@ -13,10 +13,18 @@ class LoginViewController: UIViewController {
 	@IBOutlet weak var lastNameField: UITextField!
 	@IBOutlet weak var studentIDField: UITextField!
 	@IBOutlet weak var submitButton: UIButton!
-	var firstName: String!
-	var lastName: String!
-	var studentID: Int!
+	var firstName: String! = ""
+	var lastName: String! = ""
+	var studentID: Int! = 0
 
+	override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+		super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+	}
+
+	required init?(coder aDecoder: NSCoder) {
+	    fatalError("init(coder:) has not been implemented")
+	}
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,25 +36,26 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 	
-	func checkLogin() {
-		if(firstNameField.text == "" || lastNameField.text == "" || studentIDField.text == "") {
+	func checkLogin() -> Bool {
+		if((firstNameField.hasText() || lastNameField.hasText() || studentIDField.hasText())) {
 			let errorController = UIAlertController(title: "Error!", message: "Please enter your information in every field", preferredStyle: UIAlertControllerStyle.Alert)
 			errorController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Destructive, handler: nil))
 			self.presentViewController(errorController, animated: true, completion: nil)
 		}
 		else {
-			self.firstName = firstNameField.text as String
-			self.lastName = lastNameField.text as String
-			if(Int(studentIDField.text) == nil) {
+			self.firstName = firstNameField.text! as String
+			self.lastName = lastNameField.text! as String
+			if(Int(studentIDField.text!) == nil) {
 				let errorController = UIAlertController(title: "Error!", message: "Please enter only numbers in the \"Student ID #\" field", preferredStyle: UIAlertControllerStyle.Alert)
 				errorController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Destructive, handler: nil))
 				self.presentViewController(errorController, animated: true, completion: nil)
 			}
 			else {
-				self.studentID = Int(alertController.textFields![2].text! as String)!
+				self.studentID = Int(studentIDField.text! as String)!
 			}
-			self.didFinishLogin = true
+			return true
 		}
+		return false
 	}
 
     /*
