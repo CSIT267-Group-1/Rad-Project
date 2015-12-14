@@ -27,7 +27,7 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-	
+	/*
 	func checkLogin() {
 		if(firstNameField.text == "" || lastNameField.text == "" || studentIDField.text == "") {
 			let errorController = UIAlertController(title: "Error!", message: "Please enter your information in every field", preferredStyle: UIAlertControllerStyle.Alert)
@@ -47,7 +47,7 @@ class LoginViewController: UIViewController {
 			}
 			self.didFinishLogin = true
 		}
-	}
+	}*/
 
     /*
     // MARK: - Navigation
