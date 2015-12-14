@@ -12,12 +12,9 @@ class FirstViewController: UIViewController {
 	@IBOutlet weak var imageView: UIImageView!
 	@IBOutlet weak var labelToggle: UISwitch!
     @IBOutlet var modelSeg: UISegmentedControl!
-	var firstName: String!
-	var lastName: String!
-	var studentID: Int!
-	var loginViewController: LoginViewController = LoginViewController(nibName: nil, bundle: nil)
+	//var loginViewController: LoginViewController = LoginViewController(nibName: nil, bundle: nil)
 	var didFinishLogin: Bool = false
-	
+	let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
     // Tesing login =. DELETE WHEN DONE***********
     @IBAction func testingLogin(sender: AnyObject) {
@@ -108,7 +105,6 @@ class FirstViewController: UIViewController {
 		let loginVC = mainStoryBoard.instantiateViewControllerWithIdentifier("Login")
 		loginVC.modalPresentationStyle = UIModalPresentationStyle.FormSheet
 		presentViewController(loginVC, animated: true, completion: nil)
-		didFinishLogin = loginViewController.checkLogin()
 	}
 	
 	override func viewDidAppear(animated: Bool) {
