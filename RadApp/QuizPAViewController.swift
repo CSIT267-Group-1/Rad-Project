@@ -27,6 +27,7 @@ class QuizPAViewController: UIViewController {
     @IBOutlet var multipleChoiceButtonB: UIButton!
     @IBOutlet var multipleChoiceButtonC: UIButton!
     @IBOutlet var multipleChoiceButtonD: UIButton!
+    @IBOutlet var userName: UILabel!
     
     var questions: [Quiz] = [Quiz]()
     
@@ -129,6 +130,7 @@ class QuizPAViewController: UIViewController {
         currentSelectedQuestionIndex = 0
         createQuestions()
         displayQuestion(currentSelectedQuestionIndex)
+        userName.text=(presentingViewController as! FirstViewController).userNameLabel.text!
         
     }
 

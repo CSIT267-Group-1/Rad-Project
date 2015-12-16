@@ -27,6 +27,7 @@ class QuizAPViewController: UIViewController {
     @IBOutlet var multipleChoiceButtonB: UIButton!
     @IBOutlet var multipleChoiceButtonC: UIButton!
     @IBOutlet var multipleChoiceButtonD: UIButton!
+    @IBOutlet var userName: UILabel!
     
     var questions: [Quiz] = [Quiz]()
     
@@ -130,6 +131,10 @@ class QuizAPViewController: UIViewController {
         createQuestions()
         displayQuestion(currentSelectedQuestionIndex)
         
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        userName.text=(presentingViewController as! FirstViewController).userNameLabel.text!
     }
     
     override func didReceiveMemoryWarning() {

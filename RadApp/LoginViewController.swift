@@ -17,8 +17,12 @@ class LoginViewController: UIViewController {
     @IBAction func submit(sender: AnyObject) {
         if checkLogin()
         {
+            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            let userName: String  = "\(appDelegate.firstName) \(appDelegate.lastName)"
+            
+            (presentingViewController as! FirstViewController).userNameLabel.text=userName
+            
             dismiss(self)
-
         }
     }
     override func viewDidLoad() {
@@ -37,11 +41,7 @@ class LoginViewController: UIViewController {
         let first = firstNameField.text!
         let last = lastNameField.text!
         let id = studentIDField.text!
-        
-        print(first)
-        print(last)
-        print(id)
-        
+
 		if(first == "")
         {
 			let errorController = UIAlertController(title: "Error!", message: "Please enter your FIRST name.", preferredStyle: UIAlertControllerStyle.Alert)

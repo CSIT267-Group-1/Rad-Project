@@ -35,6 +35,7 @@ class QuizRLDViewController: UIViewController {
     @IBOutlet var bariumDescCol: UIButton!
     @IBOutlet var bariumSigmoid: UIButton!
     @IBOutlet var airSigmoid: UIButton!
+    @IBOutlet var userName: UILabel!
     
     var questions: [Quiz] = [Quiz]()
     
@@ -137,6 +138,8 @@ class QuizRLDViewController: UIViewController {
         currentSelectedQuestionIndex = 0
         createQuestions()
         displayQuestion(currentSelectedQuestionIndex)
+        userName.text=(presentingViewController as! FirstViewController).userNameLabel.text!
+
         
     }
     

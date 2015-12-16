@@ -12,6 +12,10 @@ class FirstViewController: UIViewController {
 	@IBOutlet weak var imageView: UIImageView!
 	@IBOutlet weak var labelToggle: UISwitch!
     @IBOutlet var modelSeg: UISegmentedControl!
+    @IBOutlet var userNameLabel: UILabel!
+    
+    
+    
 	//var loginViewController: LoginViewController = LoginViewController(nibName: nil, bundle: nil)
 	var didFinishLogin: Bool = false
 	let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -108,9 +112,6 @@ class FirstViewController: UIViewController {
 	}
 	
 	override func viewDidAppear(animated: Bool) {
-		/*if(!didFinishLogin) {
-			didFinishLogin = loginViewController.checkLogin()
-		}*/
 	}
 	
 	override func viewDidLoad() {
