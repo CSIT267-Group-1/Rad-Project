@@ -25,6 +25,25 @@ class FirstViewController: UIViewController {
         pleaseLogin()
     }
     
+    @IBAction func signOut(sender: AnyObject) {
+        
+        let alertController = UIAlertController(title: "Change User", message: "Would you like to change user?", preferredStyle: UIAlertControllerStyle.Alert)
+        let yesAction = UIAlertAction(title: "Yes", style: UIAlertActionStyle.Default, handler: {(alertAction: UIAlertAction) in
+            
+            self.appDelegate.firstName=nil
+            self.appDelegate.lastName=nil
+            self.appDelegate.studentID=nil
+            
+            self.userNameLabel.text="Jon Snow"
+            self.pleaseLogin()
+        })
+        let noAction = UIAlertAction(title: "No", style: UIAlertActionStyle.Cancel, handler: nil)
+        
+        alertController.addAction(yesAction)
+        alertController.addAction(noAction)
+        presentViewController(alertController, animated: true, completion: nil)
+    }
+    
 	//changes picture in imageview on main screen
 	@IBAction func changePicture(sender: AnyObject) {
 		let segSelection: Int = modelSeg.selectedSegmentIndex
@@ -112,6 +131,7 @@ class FirstViewController: UIViewController {
 	}
 	
 	override func viewDidAppear(animated: Bool) {
+        pleaseLogin()
 	}
 	
 	override func viewDidLoad() {

@@ -18,10 +18,10 @@ class Email
         self.quizes=quizes
     }
     
-    func sendEmail(score: Int) -> String
+    func sendEmail(title: String, score: Int) -> String
     {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        var fileString: String = "Quiz Results/n\(appDelegate.firstName) \(appDelegate.lastName) ID: \(appDelegate.studentID)"
+        var fileString: String = "\(title) Quiz Results\n\(appDelegate.firstName) \(appDelegate.lastName) ID: \(appDelegate.studentID)\n\n"
         for var count = 0; count < quizes.count; count++
         {
             fileString += "#\(count+1) \(quizes[count].question)\n\tYour Answer: \(quizes[count].userAnswer)\n\tCorrect Answer: \(quizes[count].correctStr)\n\n"

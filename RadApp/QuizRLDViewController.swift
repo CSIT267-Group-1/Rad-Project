@@ -406,13 +406,17 @@ class QuizRLDViewController: UIViewController, MFMailComposeViewControllerDelega
     {
         //TESTING
         let email=Email(quizes: questions)
-        let resultsStr=email.sendEmail(right)
+        let resultsStr=email.sendEmail("RLD", score: right)
         
         if(MFMailComposeViewController.canSendMail())
         {
             
             let mailComposer:MFMailComposeViewController = MFMailComposeViewController()
             mailComposer.mailComposeDelegate=self
+            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            let messBody = "\(appDelegate.firstName) \(appDelegate.lastName) ID: \(appDelegate.studentID)"
+            mailComposer.setMessageBody(messBody, isHTML: false)
+            mailComposer.setSubject("RLD Quiz Results")
             presentViewController(mailComposer, animated: true, completion: nil)
             
             print(mailComposer)
