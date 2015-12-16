@@ -27,7 +27,6 @@ class QuizLLDViewController: UIViewController {
     @IBOutlet var multipleChoiceButtonB: UIButton!
     @IBOutlet var multipleChoiceButtonC: UIButton!
     @IBOutlet var multipleChoiceButtonD: UIButton!
-    @IBOutlet var multipleChoiceView: UIStackView!
     @IBOutlet var bariumAscCol: UIButton!
     @IBOutlet var airAscCol: UIButton!
     @IBOutlet var airTranCol: UIButton!
@@ -38,6 +37,14 @@ class QuizLLDViewController: UIViewController {
     @IBOutlet var airSigmoid: UIButton!
     
     var questions: [Quiz] = [Quiz]()
+    
+    @IBAction func instructions(sender: AnyObject) {
+        let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let instructionVC = mainStoryBoard.instantiateViewControllerWithIdentifier("Instructions")
+        instructionVC.modalPresentationStyle = UIModalPresentationStyle.Popover
+        instructionVC.popoverPresentationController?.sourceView=(sender as! UIView)
+        presentViewController(instructionVC, animated: true, completion: nil)
+    }
     
     @IBAction func submit(sender: AnyObject) {
         
@@ -72,14 +79,50 @@ class QuizLLDViewController: UIViewController {
         // Also removes any other current selection
         if currentSelectedArea != nil
         {
-            currentSelectedArea.backgroundColor=UIColor.clearColor()
-            currentSelectedArea=(sender as! UIButton)
-            currentSelectedArea.backgroundColor=UIColor.redColor()
+            //checks current area
+            if currentSelectedArea == multipleChoiceButtonA || currentSelectedArea == multipleChoiceButtonB || currentSelectedArea == multipleChoiceButtonC || currentSelectedArea == multipleChoiceButtonD
+            {
+                currentSelectedArea.setTitleColor(self.view.tintColor, forState: UIControlState.Normal)
+                currentSelectedArea=(sender as! UIButton)
+                
+                // checks new selected area
+                if currentSelectedArea == multipleChoiceButtonA || currentSelectedArea == multipleChoiceButtonB || currentSelectedArea == multipleChoiceButtonC || currentSelectedArea == multipleChoiceButtonD
+                {
+                    currentSelectedArea.setTitleColor(UIColor.redColor(), forState: UIControlState.Normal)
+                }
+                else
+                {
+                    currentSelectedArea.backgroundColor=UIColor.redColor()
+                }
+            }
+            else
+            {
+                currentSelectedArea.backgroundColor=UIColor.clearColor()
+                currentSelectedArea=(sender as! UIButton)
+                
+                // checks new selected area
+                if currentSelectedArea == multipleChoiceButtonA || currentSelectedArea == multipleChoiceButtonB || currentSelectedArea == multipleChoiceButtonC || currentSelectedArea == multipleChoiceButtonD
+                {
+                    currentSelectedArea.setTitleColor(UIColor.redColor(), forState: UIControlState.Normal)
+                }
+                else
+                {
+                    currentSelectedArea.backgroundColor=UIColor.redColor()
+                }
+            }
         }
         else
         {
             currentSelectedArea=(sender as! UIButton)
-            currentSelectedArea.backgroundColor=UIColor.redColor()
+
+            if currentSelectedArea == multipleChoiceButtonA || currentSelectedArea == multipleChoiceButtonB || currentSelectedArea == multipleChoiceButtonC || currentSelectedArea == multipleChoiceButtonD
+            {
+                currentSelectedArea.setTitleColor(UIColor.redColor(), forState: UIControlState.Normal)
+            }
+            else
+            {
+                currentSelectedArea.backgroundColor=UIColor.redColor()
+            }
         }
     }
     
@@ -106,28 +149,74 @@ class QuizLLDViewController: UIViewController {
     {
         var multipleChoiceArray: [String] // used to store multiple choice buton titles
         
-        questions.append(Quiz(question: "In an AP axial projection of a barium enema view, what is the anatomy that is being best demonstrated?", hasMultipleChoice: false, correctButton: sigmoid, buttonArray: nil, bariumQuestion: false))
-        questions.append(Quiz(question: "In an AP axial oblique (LPO) projection of a barium enema view, what is the anatomy that is being best demonstrated?", hasMultipleChoice: false, correctButton: sigmoid, buttonArray: nil, bariumQuestion: true))
-        questions.append(Quiz(question: "What is the location of the transverse colon on an AP view of a barium enema?", hasMultipleChoice: false, correctButton: tranCol, buttonArray: nil, bariumQuestion: true))
-        questions.append(Quiz(question: "What is the location of the ascending colon on an AP view of a barium enema?", hasMultipleChoice: false, correctButton: ascCol, buttonArray: nil, bariumQuestion: true))
-        questions.append(Quiz(question: "What is the location of the descending colon on an AP view of a barium enema?", hasMultipleChoice: false, correctButton: descCol, buttonArray: nil, bariumQuestion: true))
-        questions.append(Quiz(question: "What is the location of the hepatic flexure on an AP view of a barium enema?", hasMultipleChoice: false, correctButton: hepFelx, buttonArray: nil, bariumQuestion: true))
-        questions.append(Quiz(question: "What is the location of the splenic flexure on an AP view of a barium enema?", hasMultipleChoice: false, correctButton: spleFlex, buttonArray: nil, bariumQuestion: true))
+        questions.append(Quiz(question: "What is the flexure that is well visualized for a LPO (left posterior oblique) view for a barium enema?", hasMultipleChoice: false, correctButton: hepFelx, buttonArray: nil, bariumQuestion: true))
+        
+        questions.append(Quiz(question: "In the LAO (left anterior oblique) of a, barium enema view which flexure is of interest?", hasMultipleChoice: false, correctButton: spleFlex, buttonArray: nil, bariumQuestion: false))
+        
+        questions.append(Quiz(question: "What is the location of the transverse colon on an LLD view of a barium enema?", hasMultipleChoice: false, correctButton: tranCol, buttonArray: nil, bariumQuestion: false))
+        
+        questions.append(Quiz(question: "What is the location of the sigmoid colon on an LLD view of a barium enema?", hasMultipleChoice: false, correctButton: sigmoid, buttonArray: nil, bariumQuestion: false))
+        
+        questions.append(Quiz(question: "What is the location of the ascending colon on an LLD view of a barium enema?", hasMultipleChoice: false, correctButton: ascCol, buttonArray: nil, bariumQuestion: false))
+        
+        questions.append(Quiz(question: "What is the location of the descending colon on an LLD view of a barium enema?", hasMultipleChoice: false, correctButton: descCol, buttonArray: nil, bariumQuestion: false))
+        
+        questions.append(Quiz(question: "What is the location of the hepatic flexure on an LLD view of a barium enema?", hasMultipleChoice: false, correctButton: hepFelx, buttonArray: nil, bariumQuestion: false))
+        
+        questions.append(Quiz(question: "What is the location of the splenic flexure on an LLD view of a barium enema?", hasMultipleChoice: false, correctButton: spleFlex, buttonArray: nil, bariumQuestion: false))
+        
+        questions.append(Quiz(question: "What is the location of the barium in the ascending colon in an LLD view of a barium enema?", hasMultipleChoice: false, correctButton: bariumAscCol, buttonArray: nil, bariumQuestion: true))
+        
+        questions.append(Quiz(question: "What is the location of the air in the ascending colon in an LLD view of a barium enema?", hasMultipleChoice: false, correctButton: airAscCol, buttonArray: nil, bariumQuestion: true))
+        
+        questions.append(Quiz(question: "What is the location of the barium in the descending colon in an LLD view of a barium enema?", hasMultipleChoice: false, correctButton: bariumDescCol, buttonArray: nil, bariumQuestion: true))
+        
+        questions.append(Quiz(question: "What is the location of the air in the descending colon in an LLD view of a barium enema?", hasMultipleChoice: false, correctButton: airDescCol, buttonArray: nil, bariumQuestion: true))
+        
+        questions.append(Quiz(question: "What is the location of the barium in the ssigmoid colon in an LLD view of a barium enema?", hasMultipleChoice: false, correctButton: bariumSigmoid, buttonArray: nil, bariumQuestion: true))
+        
+        questions.append(Quiz(question: "What is the location of the air in the ssigmoid colon in an LLD view of a barium enema?", hasMultipleChoice: false, correctButton: airSigmoid, buttonArray: nil, bariumQuestion: true))
+        
+        questions.append(Quiz(question: "What is the location of the barium in the transverse colon in an LLD view of a barium enema?", hasMultipleChoice: false, correctButton: bariumTranCol, buttonArray: nil, bariumQuestion: true))
+        
+        questions.append(Quiz(question: "What is the location of the air in the transverse colon in an LLD view of a barium enema?", hasMultipleChoice: false, correctButton: airTranCol, buttonArray: nil, bariumQuestion: true))
         
         multipleChoiceArray = ["Right colic flexure and the ascending colon", "Left colic flexure and the descending colon are seen open", "Left colic flexure and the descending colon are seen closed", "Right colic flexure and the descending colon are closed"]
         questions.append(Quiz(question: "What anatomy needs to be included in the LAO (left anterior oblique) view of a barium enema?", hasMultipleChoice: true, correctButton: multipleChoiceButtonB, buttonArray: multipleChoiceArray, bariumQuestion: true))
         
-        multipleChoiceArray = ["Right hepatic flexure", "Left splenic flexure", "Transverse flexure", "Lateral flexure"]
-        questions.append(Quiz(question: "In the LAO (left anterior oblique) of a, barium enema view which flexure is of interest?", hasMultipleChoice: true, correctButton: multipleChoiceButtonA, buttonArray: multipleChoiceArray, bariumQuestion: true))
+        multipleChoiceArray = ["The right hepatic flexure, ascending and rectosigmoid portions", "The left splenic flexure, ascending portions", "The right ascending flexure", "The left ascending portions"]
+        questions.append(Quiz(question: "What anatomy needs to be included in the LPO (left posterior oblique) view of a barium enema?", hasMultipleChoice: true, correctButton: multipleChoiceButtonA, buttonArray: multipleChoiceArray, bariumQuestion: false))
+
+        multipleChoiceArray = ["Contrast filled", "Air filled", "Both air and barium filled", "Nothing is filled"]
+        questions.append(Quiz(question: "In the lateral rectum position of a barium enema view, what is the air/barium relationship?", hasMultipleChoice: true, correctButton: multipleChoiceButtonA, buttonArray: multipleChoiceArray, bariumQuestion: false))
+
+        multipleChoiceArray = ["Air-filled left hepatic flexure and descending colon", "Air-filled left hepatic flexure and ascending colon", "Air-filled right splenic flexure and ascending colon and cecum", "Air-filled left hepatic flexure and ascending colon"]
+       questions.append(Quiz(question: "In the left lateral decubitus position for a barium enema view, what is the air/barium relationship?", hasMultipleChoice: true, correctButton: multipleChoiceButtonC, buttonArray: multipleChoiceArray, bariumQuestion: false))
         
+        multipleChoiceArray = ["The left side", "The right side", "The transverse side", "The back side"]
+        questions.append(Quiz(question: "In the left lateral decubitus position for a barium enema view, what is demonstrated best?", hasMultipleChoice: true, correctButton: multipleChoiceButtonB, buttonArray: multipleChoiceArray, bariumQuestion: false))
+        
+        multipleChoiceArray = ["Sores", "Polyps", "Neoplasms", "Embolus"]
+        questions.append(Quiz(question: "In the right and left lateral decubitus’s for a barium enema views, what is the pathology that is helpful with demonstrating?", hasMultipleChoice: true, correctButton: multipleChoiceButtonB, buttonArray: multipleChoiceArray, bariumQuestion: false))
         
         // Makes the questions random
-        //shuffleQuestions()
+        shuffleQuestions()
     }
     
     func shuffleQuestions()
     {
-        let totalQuestion = questions.count
+        var totalQuestion: Int
+        
+        if questions.count >= 10
+        {
+            totalQuestion = 10
+            
+        }
+        else
+        {
+            totalQuestion = questions.count
+        }
+        
         var randomInt: Int
         var tempQuestions = [Quiz]()
         
@@ -153,7 +242,10 @@ class QuizLLDViewController: UIViewController {
         // displays the multiple choice buttons if the question has them
         if questions[number].hasMultipleChoice == true
         {
-            multipleChoiceView.hidden=false
+            multipleChoiceButtonA.hidden=false
+            multipleChoiceButtonB.hidden=false
+            multipleChoiceButtonC.hidden=false
+            multipleChoiceButtonD.hidden=false
             
             multipleChoiceButtonA.setTitle(questions[number].buttonATitle, forState: UIControlState.Normal)
             multipleChoiceButtonB.setTitle(questions[number].buttonBTitle, forState: UIControlState.Normal)
@@ -163,9 +255,10 @@ class QuizLLDViewController: UIViewController {
         }
         else
         {
-           // need to fix
-            //************************************
-            multipleChoiceView.hidden=true
+            multipleChoiceButtonA.hidden=true
+            multipleChoiceButtonB.hidden=true
+            multipleChoiceButtonC.hidden=true
+            multipleChoiceButtonD.hidden=true
         }
         
         if questions[currentSelectedQuestionIndex].bariumQues == true
@@ -185,7 +278,14 @@ class QuizLLDViewController: UIViewController {
     {
         right++
         //dispalys the correct question as green
-        questions[currentSelectedQuestionIndex].correctButton.backgroundColor=UIColor.greenColor()
+        if questions[currentSelectedQuestionIndex].correctButton == multipleChoiceButtonA || questions[currentSelectedQuestionIndex].correctButton == multipleChoiceButtonB || questions[currentSelectedQuestionIndex].correctButton == multipleChoiceButtonC || questions[currentSelectedQuestionIndex].correctButton == multipleChoiceButtonD
+        {
+            questions[currentSelectedQuestionIndex].correctButton.setTitleColor(UIColor.greenColor(), forState: UIControlState.Normal)
+        }
+        else
+        {
+            questions[currentSelectedQuestionIndex].correctButton.backgroundColor=UIColor.greenColor()
+        }
         
         //sets corrct variable to true and the text of the answer
         questions[currentSelectedQuestionIndex].correct=true
@@ -222,7 +322,14 @@ class QuizLLDViewController: UIViewController {
         wrong++
         
         // display the correct answer as green
-        questions[currentSelectedQuestionIndex].correctButton.backgroundColor=UIColor.greenColor()
+        if questions[currentSelectedQuestionIndex].correctButton == multipleChoiceButtonA || questions[currentSelectedQuestionIndex].correctButton == multipleChoiceButtonB || questions[currentSelectedQuestionIndex].correctButton == multipleChoiceButtonC || questions[currentSelectedQuestionIndex].correctButton == multipleChoiceButtonD
+        {
+            questions[currentSelectedQuestionIndex].correctButton.setTitleColor(UIColor.greenColor(), forState: UIControlState.Normal)
+        }
+        else
+        {
+            questions[currentSelectedQuestionIndex].correctButton.backgroundColor=UIColor.greenColor()
+        }
         
         //sets correct variable to false and the text of the answer
         questions[currentSelectedQuestionIndex].correct=false
@@ -255,10 +362,25 @@ class QuizLLDViewController: UIViewController {
     // resets the users selection so nothing is displayed
     func resetSelection()
     {
-        currentSelectedArea.backgroundColor=UIColor.clearColor()
-        currentSelectedArea=nil
-        questions[currentSelectedQuestionIndex].correctButton.backgroundColor=UIColor.clearColor()
+        if currentSelectedArea == multipleChoiceButtonA || currentSelectedArea == multipleChoiceButtonB || currentSelectedArea == multipleChoiceButtonC || currentSelectedArea == multipleChoiceButtonD
+        {
+            currentSelectedArea.setTitleColor(self.view.tintColor, forState: UIControlState.Normal)
+        }
+        else
+        {
+            currentSelectedArea.backgroundColor=UIColor.clearColor()
+        }
         
+        currentSelectedArea=nil
+        
+        if questions[currentSelectedQuestionIndex].correctButton == multipleChoiceButtonA || questions[currentSelectedQuestionIndex].correctButton == multipleChoiceButtonB || questions[currentSelectedQuestionIndex].correctButton == multipleChoiceButtonC || questions[currentSelectedQuestionIndex].correctButton == multipleChoiceButtonD
+        {
+            questions[currentSelectedQuestionIndex].correctButton.setTitleColor(self.view.tintColor, forState: UIControlState.Normal)
+        }
+        else
+        {
+            questions[currentSelectedQuestionIndex].correctButton.backgroundColor=UIColor.clearColor()
+        }
     }
     
     // for the end of the quiz

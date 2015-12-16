@@ -20,6 +20,7 @@
 		FC14305E1C0D1897003580A7 /* QuizPAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC14305D1C0D1897003580A7 /* QuizPAViewController.swift */; };
 		FC1430601C0D27DA003580A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC14305F1C0D27DA003580A7 /* Main.storyboard */; };
 		FC9577591C18C994001C0897 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9577581C18C994001C0897 /* Quiz.swift */; };
+		FCADB7271C214E0D00FD5C51 /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCADB7261C214E0D00FD5C51 /* InstructionsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		FC14305D1C0D1897003580A7 /* QuizPAViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizPAViewController.swift; sourceTree = "<group>"; };
 		FC14305F1C0D27DA003580A7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		FC9577581C18C994001C0897 /* Quiz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
+		FCADB7261C214E0D00FD5C51 /* InstructionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				D65B80421C0CF3E900C3E444 /* AppDelegate.swift */,
 				D65B80441C0CF3E900C3E444 /* FirstViewController.swift */,
 				FC14305F1C0D27DA003580A7 /* Main.storyboard */,
+				FCADB7261C214E0D00FD5C51 /* InstructionsViewController.swift */,
 				D6AEE87F1C1F6CA100F94036 /* Assets.xcassets */,
 				D68607501C191884000DED4E /* LoginViewController.swift */,
 				D6D156271C0F9EE20035882E /* QuizLLDViewController.swift */,
@@ -278,6 +281,7 @@
 				D6D156261C0F9ED50035882E /* QuizAPViewController.swift in Sources */,
 				D65B80431C0CF3E900C3E444 /* AppDelegate.swift in Sources */,
 				FC9577591C18C994001C0897 /* Quiz.swift in Sources */,
+				FCADB7271C214E0D00FD5C51 /* InstructionsViewController.swift in Sources */,
 				FC14305E1C0D1897003580A7 /* QuizPAViewController.swift in Sources */,
 				D68607511C191884000DED4E /* LoginViewController.swift in Sources */,
 				D6D156281C0F9EE20035882E /* QuizLLDViewController.swift in Sources */,

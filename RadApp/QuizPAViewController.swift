@@ -27,9 +27,16 @@ class QuizPAViewController: UIViewController {
     @IBOutlet var multipleChoiceButtonB: UIButton!
     @IBOutlet var multipleChoiceButtonC: UIButton!
     @IBOutlet var multipleChoiceButtonD: UIButton!
-    @IBOutlet var multipleChoiceView: UIStackView!
     
     var questions: [Quiz] = [Quiz]()
+    
+    @IBAction func instructions(sender: AnyObject) {
+        let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let instructionVC = mainStoryBoard.instantiateViewControllerWithIdentifier("Instructions")
+        instructionVC.modalPresentationStyle = UIModalPresentationStyle.Popover
+        instructionVC.popoverPresentationController?.sourceView=(sender as! UIView)
+        presentViewController(instructionVC, animated: true, completion: nil)
+    }
     
     @IBAction func submit(sender: AnyObject) {
         
@@ -60,18 +67,54 @@ class QuizPAViewController: UIViewController {
     
     @IBAction func locationSelected(sender: AnyObject) {
         
-        // sets the setelced location to so the user can see where they clicked. 
+        // sets the setelced location to so the user can see where they clicked.
         // Also removes any other current selection
         if currentSelectedArea != nil
         {
-            currentSelectedArea.backgroundColor=UIColor.clearColor()
-            currentSelectedArea=(sender as! UIButton)
-            currentSelectedArea.backgroundColor=UIColor.redColor()
+            //checks current area
+            if currentSelectedArea == multipleChoiceButtonA || currentSelectedArea == multipleChoiceButtonB || currentSelectedArea == multipleChoiceButtonC || currentSelectedArea == multipleChoiceButtonD
+            {
+                currentSelectedArea.setTitleColor(self.view.tintColor, forState: UIControlState.Normal)
+                currentSelectedArea=(sender as! UIButton)
+                
+                // checks new selected area
+                if currentSelectedArea == multipleChoiceButtonA || currentSelectedArea == multipleChoiceButtonB || currentSelectedArea == multipleChoiceButtonC || currentSelectedArea == multipleChoiceButtonD
+                {
+                    currentSelectedArea.setTitleColor(UIColor.redColor(), forState: UIControlState.Normal)
+                }
+                else
+                {
+                    currentSelectedArea.backgroundColor=UIColor.redColor()
+                }
+            }
+            else
+            {
+                currentSelectedArea.backgroundColor=UIColor.clearColor()
+                currentSelectedArea=(sender as! UIButton)
+                
+                // checks new selected area
+                if currentSelectedArea == multipleChoiceButtonA || currentSelectedArea == multipleChoiceButtonB || currentSelectedArea == multipleChoiceButtonC || currentSelectedArea == multipleChoiceButtonD
+                {
+                    currentSelectedArea.setTitleColor(UIColor.redColor(), forState: UIControlState.Normal)
+                }
+                else
+                {
+                    currentSelectedArea.backgroundColor=UIColor.redColor()
+                }
+            }
         }
         else
         {
             currentSelectedArea=(sender as! UIButton)
-            currentSelectedArea.backgroundColor=UIColor.redColor()
+            
+            if currentSelectedArea == multipleChoiceButtonA || currentSelectedArea == multipleChoiceButtonB || currentSelectedArea == multipleChoiceButtonC || currentSelectedArea == multipleChoiceButtonD
+            {
+                currentSelectedArea.setTitleColor(UIColor.redColor(), forState: UIControlState.Normal)
+            }
+            else
+            {
+                currentSelectedArea.backgroundColor=UIColor.redColor()
+            }
         }
     }
 
@@ -99,10 +142,16 @@ class QuizPAViewController: UIViewController {
         var multipleChoiceArray: [String] // used to store multiple choice buton titles
 
         questions.append(Quiz(question: "What is the location of the splenic flexure on a PA view of a barium enema?", hasMultipleChoice: false, correctButton: spleFlex, buttonArray: nil, bariumQuestion: false))
+        
         questions.append(Quiz(question: "What is the location of the hepatic flexure on a PA view of a barium enema?", hasMultipleChoice: false, correctButton: hepFelx, buttonArray: nil, bariumQuestion: false))
+        
         questions.append(Quiz(question: "What is the location of the descending colon on a PA view of a barium enema?", hasMultipleChoice: false, correctButton: descCol, buttonArray: nil, bariumQuestion: false))
+        
         questions.append(Quiz(question: "What is the location of the ascending colon on a PA view of a barium enema?", hasMultipleChoice: false, correctButton: ascCol, buttonArray: nil, bariumQuestion: false))
+        
         questions.append(Quiz(question: "What is the location of the transverse colon on a PA view of a barium enema?", hasMultipleChoice: false, correctButton: tranCol, buttonArray: nil, bariumQuestion: false))
+        
+        questions.append(Quiz(question: "What is the location of the sigmoid colon on a PA view of a barium enema?", hasMultipleChoice: false, correctButton: sigmoid, buttonArray: nil, bariumQuestion: false))
         
         multipleChoiceArray = ["Air", "Barium", "Both air and Barium", "Nothing"]
         questions.append(Quiz(question: "In a PA view of a barium enema, Is the transverse colon filled with ______________?", hasMultipleChoice: true, correctButton: multipleChoiceButtonB, buttonArray: multipleChoiceArray, bariumQuestion: false))
@@ -119,7 +168,18 @@ class QuizPAViewController: UIViewController {
     
     func shuffleQuestions()
     {
-        let totalQuestion = questions.count
+        var totalQuestion: Int
+        
+        if questions.count >= 10
+        {
+            totalQuestion = 10
+
+        }
+        else
+        {
+            totalQuestion = questions.count
+        }
+        
         var randomInt: Int
         var tempQuestions = [Quiz]()
         
@@ -145,18 +205,25 @@ class QuizPAViewController: UIViewController {
         // displays the multiple choice buttons if the question has them
         if questions[number].hasMultipleChoice == true
         {
-            multipleChoiceView.hidden=false
+            multipleChoiceButtonA.hidden=false
+            multipleChoiceButtonB.hidden=false
+            multipleChoiceButtonC.hidden=false
+            multipleChoiceButtonD.hidden=false
             
             multipleChoiceButtonA.setTitle(questions[number].buttonATitle, forState: UIControlState.Normal)
             multipleChoiceButtonB.setTitle(questions[number].buttonBTitle, forState: UIControlState.Normal)
             multipleChoiceButtonC.setTitle(questions[number].buttonCTitle, forState: UIControlState.Normal)
             multipleChoiceButtonD.setTitle(questions[number].buttonDTitle, forState: UIControlState.Normal)
-
+            
         }
         else
         {
-            multipleChoiceView.hidden=true
+            multipleChoiceButtonA.hidden=true
+            multipleChoiceButtonB.hidden=true
+            multipleChoiceButtonC.hidden=true
+            multipleChoiceButtonD.hidden=true
         }
+        
     }
     
     // displays the correct answer
@@ -164,7 +231,14 @@ class QuizPAViewController: UIViewController {
     {
         right++
         //dispalys the correct question as green
-        questions[currentSelectedQuestionIndex].correctButton.backgroundColor=UIColor.greenColor()
+        if questions[currentSelectedQuestionIndex].correctButton == multipleChoiceButtonA || questions[currentSelectedQuestionIndex].correctButton == multipleChoiceButtonB || questions[currentSelectedQuestionIndex].correctButton == multipleChoiceButtonC || questions[currentSelectedQuestionIndex].correctButton == multipleChoiceButtonD
+        {
+            questions[currentSelectedQuestionIndex].correctButton.setTitleColor(UIColor.greenColor(), forState: UIControlState.Normal)
+        }
+        else
+        {
+            questions[currentSelectedQuestionIndex].correctButton.backgroundColor=UIColor.greenColor()
+        }
         
         //sets corrct variable to true and the text of the answer
         questions[currentSelectedQuestionIndex].correct=true
@@ -201,7 +275,14 @@ class QuizPAViewController: UIViewController {
         wrong++
         
         // display the correct answer as green
-        questions[currentSelectedQuestionIndex].correctButton.backgroundColor=UIColor.greenColor()
+        if questions[currentSelectedQuestionIndex].correctButton == multipleChoiceButtonA || questions[currentSelectedQuestionIndex].correctButton == multipleChoiceButtonB || questions[currentSelectedQuestionIndex].correctButton == multipleChoiceButtonC || questions[currentSelectedQuestionIndex].correctButton == multipleChoiceButtonD
+        {
+            questions[currentSelectedQuestionIndex].correctButton.setTitleColor(UIColor.greenColor(), forState: UIControlState.Normal)
+        }
+        else
+        {
+            questions[currentSelectedQuestionIndex].correctButton.backgroundColor=UIColor.greenColor()
+        }
         
         //sets correct variable to false and the text of the answer
         questions[currentSelectedQuestionIndex].correct=false
@@ -234,9 +315,25 @@ class QuizPAViewController: UIViewController {
     // resets the users selection so nothing is displayed
     func resetSelection()
     {
-        currentSelectedArea.backgroundColor=UIColor.clearColor()
+        if currentSelectedArea == multipleChoiceButtonA || currentSelectedArea == multipleChoiceButtonB || currentSelectedArea == multipleChoiceButtonC || currentSelectedArea == multipleChoiceButtonD
+        {
+            currentSelectedArea.setTitleColor(self.view.tintColor, forState: UIControlState.Normal)
+        }
+        else
+        {
+            currentSelectedArea.backgroundColor=UIColor.clearColor()
+        }
+        
         currentSelectedArea=nil
-        questions[currentSelectedQuestionIndex].correctButton.backgroundColor=UIColor.clearColor()
+        
+        if questions[currentSelectedQuestionIndex].correctButton == multipleChoiceButtonA || questions[currentSelectedQuestionIndex].correctButton == multipleChoiceButtonB || questions[currentSelectedQuestionIndex].correctButton == multipleChoiceButtonC || questions[currentSelectedQuestionIndex].correctButton == multipleChoiceButtonD
+        {
+            questions[currentSelectedQuestionIndex].correctButton.setTitleColor(self.view.tintColor, forState: UIControlState.Normal)
+        }
+        else
+        {
+            questions[currentSelectedQuestionIndex].correctButton.backgroundColor=UIColor.clearColor()
+        }
 
     }
     

@@ -24,6 +24,16 @@ class LoginViewController: UIViewController {
 	    fatalError("init(coder:) has not been implemented")
 	} */
 	
+    @IBAction func submit(sender: AnyObject) {
+        if checkLogin()
+        {
+            dismiss(self)
+        }
+        else
+        {
+            // do something if not all info was aded
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,6 +46,9 @@ class LoginViewController: UIViewController {
     }
 
 	func checkLogin() -> Bool {
+        
+        
+        /*
 		if(firstNameField == nil || lastNameField == nil || studentIDField == nil) {
 			let errorController = UIAlertController(title: "Error!", message: "Please enter your information in every field", preferredStyle: UIAlertControllerStyle.Alert)
 			errorController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Destructive, handler: nil))
@@ -54,7 +67,7 @@ class LoginViewController: UIViewController {
 			}
 			return true
 		}
-		return false
+		return false*/
 	}
 
     /*
