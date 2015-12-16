@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MessageUI
 
-class QuizAPViewController: UIViewController {
+class QuizAPViewController: UIViewController, MFMailComposeViewControllerDelegate {
     
     var currentSelectedArea: UIButton!
     var currentSelectedQuestionIndex: Int = -1 // stores the current question location from the array
@@ -179,7 +180,7 @@ class QuizAPViewController: UIViewController {
         
         if questions.count >= 10
         {
-            totalQuestion = 10
+            totalQuestion = 1
             
         }
         else
@@ -361,6 +362,28 @@ class QuizAPViewController: UIViewController {
     func displayEmail()
     {
         //TESTING
-        dismissQuiz(nil)
+        let email=Email(quizes: questions)
+        let resultsStr=email.sendEmail(right)
+        
+        if(MFMailComposeViewController.canSendMail())
+        {
+            
+        let mailComposer:MFMailComposeViewController = MFMailComposeViewController()
+        mailComposer.mailComposeDelegate=self
+        presentViewController(mailComposer, animated: true, completion: nil)
+            
+            print(mailComposer)
+            if let data = (resultsStr as NSString).dataUsingEncoding(NSUTF8StringEncoding){
+                //Attach File
+                mailComposer.addAttachmentData(data, mimeType: "text/plain", fileName: "Results")
+                self.presentViewController(mailComposer, animated: true, completion: nil)
+            }
+        }
+        
+        //dismissQuiz(nil)
+    }
+    
+    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
+        dismissViewControllerAnimated(true, completion: nil)
     }
 }
