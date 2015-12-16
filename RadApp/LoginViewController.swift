@@ -13,25 +13,12 @@ class LoginViewController: UIViewController {
 	@IBOutlet weak var lastNameField: UITextField!
 	@IBOutlet weak var studentIDField: UITextField!
 	@IBOutlet weak var submitButton: UIButton!
-	let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-	
-
-/**	override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
-		super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-	}
-
-	required init?(coder aDecoder: NSCoder) {
-	    fatalError("init(coder:) has not been implemented")
-	} */
 	
     @IBAction func submit(sender: AnyObject) {
         if checkLogin()
         {
             dismiss(self)
-        }
-        else
-        {
-            // do something if not all info was aded
+
         }
     }
     override func viewDidLoad() {
@@ -46,39 +33,52 @@ class LoginViewController: UIViewController {
     }
 
 	func checkLogin() -> Bool {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let first = firstNameField.text!
+        let last = lastNameField.text!
+        let id = studentIDField.text!
         
+        print(first)
+        print(last)
+        print(id)
         
-        /*
-		if(firstNameField == nil || lastNameField == nil || studentIDField == nil) {
-			let errorController = UIAlertController(title: "Error!", message: "Please enter your information in every field", preferredStyle: UIAlertControllerStyle.Alert)
+		if(first == "")
+        {
+			let errorController = UIAlertController(title: "Error!", message: "Please enter your FIRST name.", preferredStyle: UIAlertControllerStyle.Alert)
 			errorController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Destructive, handler: nil))
 			self.presentViewController(errorController, animated: true, completion: nil)
+            
+            print("No ID info entered")
+            
+            return false
 		}
-		else {
-			appDelegate.firstName = firstNameField.text! as String
-			appDelegate.lastName = lastNameField.text! as String
-			if(Int(studentIDField.text!) == nil) {
-				let errorController = UIAlertController(title: "Error!", message: "Please enter only numbers in the \"Student ID #\" field", preferredStyle: UIAlertControllerStyle.Alert)
-				errorController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Destructive, handler: nil))
-				self.presentViewController(errorController, animated: true, completion: nil)
-			}
-			else {
-				appDelegate.studentID = Int(studentIDField.text! as String)!
-			}
-			return true
-		}
-		return false*/
+            
+        if(last == "")
+        {
+            let errorController = UIAlertController(title: "Error!", message: "Please enter your LAST name.", preferredStyle: UIAlertControllerStyle.Alert)
+            errorController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Destructive, handler: nil))
+            self.presentViewController(errorController, animated: true, completion: nil)
+            
+            print("No ID info entered")
+            
+            return false
+        }
+            
+        if Int(id) == nil
+        {
+            let errorController = UIAlertController(title: "Error!", message: "Please enter only numbers in the \"Student ID #\" field", preferredStyle: UIAlertControllerStyle.Alert)
+            errorController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Destructive, handler: nil))
+            self.presentViewController(errorController, animated: true, completion: nil)
+            
+            return false
+        }
+        
+        appDelegate.firstName = first
+        appDelegate.lastName = last
+        appDelegate.studentID = Int(id)
+        
+        return true
 	}
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 	
 	@IBAction func dismiss(sender: AnyObject) {
 		dismissViewControllerAnimated(true, completion: nil)
