@@ -51,7 +51,7 @@ class QuizLLDViewController: UIViewController {
         
         if currentSelectedArea == nil
         {
-            let alertController = UIAlertController(title: "Select an Area", message: "You did no choose and answer to submit. Please selected a answer.", preferredStyle: UIAlertControllerStyle.Alert)
+            let alertController = UIAlertController(title: "Select an Area", message: "You did not choose an answer to submit. Please select an answer.", preferredStyle: UIAlertControllerStyle.Alert)
             
             let defaultAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: {(alertAction: UIAlertAction!) in
             })
@@ -296,9 +296,9 @@ class QuizLLDViewController: UIViewController {
         questions[currentSelectedQuestionIndex].userAnswer=currentSelectedArea.titleLabel?.text
         
         //display the alert to left the user know what they did
-        let alertController = UIAlertController(title: "Your Answer Was Right", message: "Good Job.", preferredStyle: UIAlertControllerStyle.Alert)
+        let alertController = UIAlertController(title: "Your answer was correct!", message: "Good job.", preferredStyle: UIAlertControllerStyle.Alert)
         
-        let defaultAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: {(alertAction: UIAlertAction!) in
+        let defaultAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {(alertAction: UIAlertAction!) in
             
             // for end of quiz
             if self.currentSelectedQuestionIndex+1 == self.questions.count
@@ -340,9 +340,9 @@ class QuizLLDViewController: UIViewController {
         questions[currentSelectedQuestionIndex].userAnswer=currentSelectedArea.titleLabel?.text
         
         //displays a alert control to let the user know they were wrong
-        let alertController = UIAlertController(title: "Your Answer Was Wrong", message: "The correct answer is highlighted in green.", preferredStyle: UIAlertControllerStyle.Alert)
+        let alertController = UIAlertController(title: "Your answer was incorrect!", message: "The correct answer is highlighted in green.", preferredStyle: UIAlertControllerStyle.Alert)
         
-        let defaultAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: {(alertAction: UIAlertAction!) in
+        let defaultAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {(alertAction: UIAlertAction!) in
             
             //for end of quiz
             if self.currentSelectedQuestionIndex+1 == self.questions.count

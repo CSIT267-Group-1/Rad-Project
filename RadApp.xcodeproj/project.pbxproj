@@ -111,7 +111,6 @@
 		D65B80411C0CF3E900C3E444 /* RadApp */ = {
 			isa = PBXGroup;
 			children = (
-				FC14305D1C0D1897003580A7 /* QuizPAViewController.swift */,
 				D65B80501C0CF3E900C3E444 /* Info.plist */,
 				D65B80421C0CF3E900C3E444 /* AppDelegate.swift */,
 				D65B80441C0CF3E900C3E444 /* FirstViewController.swift */,
@@ -119,6 +118,7 @@
 				FCADB7261C214E0D00FD5C51 /* InstructionsViewController.swift */,
 				D6AEE87F1C1F6CA100F94036 /* Assets.xcassets */,
 				D68607501C191884000DED4E /* LoginViewController.swift */,
+				FC14305D1C0D1897003580A7 /* QuizPAViewController.swift */,
 				D6D156271C0F9EE20035882E /* QuizLLDViewController.swift */,
 				D6D156291C0F9EE90035882E /* QuizRLDViewController.swift */,
 				D6D156251C0F9ED50035882E /* QuizAPViewController.swift */,
