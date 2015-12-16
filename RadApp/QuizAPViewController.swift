@@ -371,7 +371,7 @@ class QuizAPViewController: UIViewController, MFMailComposeViewControllerDelegat
         let mailComposer:MFMailComposeViewController = MFMailComposeViewController()
         mailComposer.mailComposeDelegate=self
         presentViewController(mailComposer, animated: true, completion: nil)
-            
+            //
             print(mailComposer)
             if let data = (resultsStr as NSString).dataUsingEncoding(NSUTF8StringEncoding){
                 //Attach File

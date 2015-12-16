@@ -362,7 +362,7 @@ class QuizRLDViewController: UIViewController, MFMailComposeViewControllerDelega
         presentViewController(alertController, animated: true, completion: nil)
         
     }
-    
+    //
     // resets the users selection so nothing is displayed
     func resetSelection()
     {

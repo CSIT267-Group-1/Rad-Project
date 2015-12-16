@@ -27,7 +27,7 @@ class Quiz
     var correctStr: String!
     var userAnswer: String!
     var bariumQues: Bool!
-    
+    //
     init (question: String, hasMultipleChoice: Bool, correctButton: UIButton, buttonArray: [String]?, bariumQuestion: Bool)
     {
         self.question=question

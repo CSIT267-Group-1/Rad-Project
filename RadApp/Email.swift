@@ -10,7 +10,7 @@ import UIKit
 
 class Email
 {
-    
+ //
     var quizes: [Quiz]!
     
     init (quizes: [Quiz])
