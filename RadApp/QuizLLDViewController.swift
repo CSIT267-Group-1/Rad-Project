@@ -439,7 +439,7 @@ class QuizLLDViewController: UIViewController, MFMailComposeViewControllerDelega
             let mailComposer:MFMailComposeViewController = MFMailComposeViewController()
             mailComposer.mailComposeDelegate=self
             let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-            let messBody = "\(appDelegate.firstName) \(appDelegate.lastName) ID: \(appDelegate.studentID)"
+            let messBody = "\(appDelegate.firstName) \(appDelegate.lastName)\n\(appDelegate.studentID)"
             mailComposer.setMessageBody(messBody, isHTML: false)
             mailComposer.setSubject("LLD Quiz Results")
             presentViewController(mailComposer, animated: true, completion: nil)
