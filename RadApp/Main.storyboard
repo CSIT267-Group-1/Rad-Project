@@ -1146,10 +1146,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VHy-EX-FQt">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VHy-EX-FQt">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ou-6U-Ryl">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ou-6U-Ryl">
                                         <rect key="frame" x="20" y="70" width="560" height="41"/>
                                         <string key="text">1. The quiz will display up to 10 different question for you to answer.
 </string>
@@ -1157,7 +1157,7 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWb-34-LqB">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWb-34-LqB">
                                         <rect key="frame" x="20" y="119" width="560" height="41"/>
                                         <string key="text">2. There will be two different types of questions that can be shown.
 </string>
@@ -1165,7 +1165,7 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQu-RD-Ewb">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQu-RD-Ewb">
                                         <rect key="frame" x="48" y="168" width="532" height="61"/>
                                         <string key="text">A) The first type will display four multiple choice answer for you to choose.
 </string>
@@ -1173,67 +1173,107 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GjC-hG-CHB">
-                                        <rect key="frame" x="68" y="222" width="532" height="41"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GjC-hG-CHB">
+                                        <rect key="frame" x="68" y="237" width="512" height="41"/>
                                         <string key="text">     - Tap one of the four answers to pick your answer.
 </string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6OO-PB-p0t">
-                                        <rect key="frame" x="48" y="266" width="532" height="61"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quiz Instructions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRE-uf-276">
+                                        <rect key="frame" x="20" y="32" width="560" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6OO-PB-p0t">
+                                        <rect key="frame" x="48" y="286" width="532" height="61"/>
                                         <string key="text">B) The second type will not display any multiple choice answer and will instead ask you to tab a location on the picture.
 </string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rhm-fk-xLe">
-                                        <rect key="frame" x="20" y="335" width="560" height="61"/>
-                                        <string key="text">3. After choosing an answer, tap the submit button to see if your answer was correct.
-</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v2q-26-K8q">
-                                        <rect key="frame" x="20" y="404" width="560" height="41"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v2q-26-K8q">
+                                        <rect key="frame" x="20" y="424" width="560" height="41"/>
                                         <string key="text">4. A messaged will be displayed with the result of your answer.
 </string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIa-xj-z7S">
-                                        <rect key="frame" x="20" y="453" width="560" height="41"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIa-xj-z7S">
+                                        <rect key="frame" x="20" y="473" width="560" height="41"/>
                                         <string key="text">5. The correct answer will be highlighted in green.
 </string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quiz Instructions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRE-uf-276">
-                                        <rect key="frame" x="20" y="32" width="560" height="30"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rhm-fk-xLe">
+                                        <rect key="frame" x="20" y="355" width="560" height="61"/>
+                                        <string key="text">3. After choosing an answer, tap the submit button to see if your answer was correct.
+</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="6. If your answer was wrong, you will see you answer chosen as red and the correct answer highlighted in green." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4a-V7-qwX">
-                                        <rect key="frame" x="20" y="502" width="1185" height="41"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6. If your answer was wrong, you will see you answer chosen as red and the correct answer highlighted in green." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4a-V7-qwX">
+                                        <rect key="frame" x="20" y="522" width="560" height="41"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="NWb-34-LqB" firstAttribute="top" secondItem="3Ou-6U-Ryl" secondAttribute="bottom" constant="8" symbolic="YES" id="07r-Pb-v9t"/>
+                                    <constraint firstItem="GjC-hG-CHB" firstAttribute="leading" secondItem="VHy-EX-FQt" secondAttribute="leading" constant="68" id="1zp-E2-pPR"/>
+                                    <constraint firstItem="Rhm-fk-xLe" firstAttribute="leading" secondItem="v2q-26-K8q" secondAttribute="leading" id="5JR-QB-KFB"/>
+                                    <constraint firstItem="HIa-xj-z7S" firstAttribute="trailing" secondItem="v2q-26-K8q" secondAttribute="trailing" id="8yd-Fg-4pK"/>
+                                    <constraint firstItem="6OO-PB-p0t" firstAttribute="leading" secondItem="GQu-RD-Ewb" secondAttribute="leading" id="DmH-0e-yEx"/>
+                                    <constraint firstItem="yRE-uf-276" firstAttribute="top" secondItem="VHy-EX-FQt" secondAttribute="top" constant="32" id="Ev4-cP-afP"/>
+                                    <constraint firstItem="3Ou-6U-Ryl" firstAttribute="trailing" secondItem="yRE-uf-276" secondAttribute="trailing" id="GMN-SE-3xG"/>
+                                    <constraint firstItem="GjC-hG-CHB" firstAttribute="top" secondItem="GQu-RD-Ewb" secondAttribute="bottom" constant="8" symbolic="YES" id="JrZ-dK-PuB"/>
+                                    <constraint firstItem="NWb-34-LqB" firstAttribute="leading" secondItem="3Ou-6U-Ryl" secondAttribute="leading" id="LRf-G1-kYT"/>
+                                    <constraint firstItem="GQu-RD-Ewb" firstAttribute="leading" secondItem="VHy-EX-FQt" secondAttribute="leading" constant="48" id="MQ0-E9-DYJ"/>
+                                    <constraint firstItem="3Ou-6U-Ryl" firstAttribute="leading" secondItem="yRE-uf-276" secondAttribute="leading" id="Ozd-Ta-xbG"/>
+                                    <constraint firstItem="GQu-RD-Ewb" firstAttribute="top" secondItem="NWb-34-LqB" secondAttribute="bottom" constant="8" symbolic="YES" id="Q9F-MH-Blf"/>
+                                    <constraint firstItem="GjC-hG-CHB" firstAttribute="trailing" secondItem="GQu-RD-Ewb" secondAttribute="trailing" id="QJ8-qe-sPB"/>
+                                    <constraint firstItem="3Ou-6U-Ryl" firstAttribute="trailing" secondItem="NWb-34-LqB" secondAttribute="trailing" id="R5c-40-E6m"/>
+                                    <constraint firstItem="v2q-26-K8q" firstAttribute="leading" secondItem="HIa-xj-z7S" secondAttribute="leading" id="Ufu-RJ-pV0"/>
+                                    <constraint firstItem="3Ou-6U-Ryl" firstAttribute="top" secondItem="yRE-uf-276" secondAttribute="bottom" constant="8" symbolic="YES" id="V8b-lH-Dct"/>
+                                    <constraint firstItem="NWb-34-LqB" firstAttribute="leading" secondItem="Rhm-fk-xLe" secondAttribute="leading" id="Xji-m4-QB1"/>
+                                    <constraint firstItem="6OO-PB-p0t" firstAttribute="top" secondItem="GjC-hG-CHB" secondAttribute="bottom" constant="8" symbolic="YES" id="Xp6-ND-LeH"/>
+                                    <constraint firstItem="Rhm-fk-xLe" firstAttribute="trailing" secondItem="6OO-PB-p0t" secondAttribute="trailing" id="a0d-Hr-m6R"/>
+                                    <constraint firstItem="J4a-V7-qwX" firstAttribute="trailing" secondItem="HIa-xj-z7S" secondAttribute="trailing" id="dy7-7B-2Hm"/>
+                                    <constraint firstItem="J4a-V7-qwX" firstAttribute="top" secondItem="HIa-xj-z7S" secondAttribute="bottom" constant="8" symbolic="YES" id="etA-cN-Mlk"/>
+                                    <constraint firstAttribute="trailing" secondItem="yRE-uf-276" secondAttribute="trailing" constant="20" id="fCv-Kv-hzA"/>
+                                    <constraint firstItem="HIa-xj-z7S" firstAttribute="top" secondItem="v2q-26-K8q" secondAttribute="bottom" constant="8" symbolic="YES" id="ffo-o7-5LV"/>
+                                    <constraint firstItem="NWb-34-LqB" firstAttribute="trailing" secondItem="GQu-RD-Ewb" secondAttribute="trailing" id="hj5-wu-hDD"/>
+                                    <constraint firstItem="3Ou-6U-Ryl" firstAttribute="centerX" secondItem="VHy-EX-FQt" secondAttribute="centerX" id="iOZ-f2-nxq"/>
+                                    <constraint firstItem="v2q-26-K8q" firstAttribute="top" secondItem="Rhm-fk-xLe" secondAttribute="bottom" constant="8" symbolic="YES" id="k03-uQ-7qd"/>
+                                    <constraint firstAttribute="bottom" secondItem="J4a-V7-qwX" secondAttribute="bottom" constant="37" id="kLf-Mi-cym"/>
+                                    <constraint firstItem="Rhm-fk-xLe" firstAttribute="top" secondItem="6OO-PB-p0t" secondAttribute="bottom" constant="8" symbolic="YES" id="oxj-is-ntk"/>
+                                    <constraint firstItem="HIa-xj-z7S" firstAttribute="leading" secondItem="J4a-V7-qwX" secondAttribute="leading" id="q62-hy-D1t"/>
+                                    <constraint firstItem="yRE-uf-276" firstAttribute="leading" secondItem="VHy-EX-FQt" secondAttribute="leading" constant="20" id="uxs-Jz-8sn"/>
+                                    <constraint firstItem="6OO-PB-p0t" firstAttribute="trailing" secondItem="GjC-hG-CHB" secondAttribute="trailing" id="wkx-h9-qk4"/>
+                                    <constraint firstItem="v2q-26-K8q" firstAttribute="trailing" secondItem="Rhm-fk-xLe" secondAttribute="trailing" id="ykx-dY-fIK"/>
+                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VHy-EX-FQt" firstAttribute="bottom" secondItem="fnC-i4-ugU" secondAttribute="top" id="4uT-Rv-7qR"/>
+                            <constraint firstItem="VHy-EX-FQt" firstAttribute="top" secondItem="eeg-cQ-R67" secondAttribute="top" id="Fgk-Nb-Qwu"/>
+                            <constraint firstAttribute="trailing" secondItem="VHy-EX-FQt" secondAttribute="trailing" id="LGq-Ft-Nzu"/>
+                            <constraint firstItem="VHy-EX-FQt" firstAttribute="leading" secondItem="eeg-cQ-R67" secondAttribute="leading" id="woJ-FE-yOW"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m71-Qh-9R3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="170" y="1854"/>
+            <point key="canvasLocation" x="916" y="1608"/>
         </scene>
     </scenes>
     <resources>

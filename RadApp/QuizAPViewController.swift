@@ -180,7 +180,7 @@ class QuizAPViewController: UIViewController, MFMailComposeViewControllerDelegat
         
         if questions.count >= 10
         {
-            totalQuestion = 1
+            totalQuestion = 10
             
         }
         else
@@ -350,7 +350,7 @@ class QuizAPViewController: UIViewController, MFMailComposeViewControllerDelegat
         //displays results of the user
         let alertController = UIAlertController(title: "End of Quiz", message: "You scored \(right)/\(questions.count).", preferredStyle: UIAlertControllerStyle.Alert)
         
-        let defaultAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: {(alertAction: UIAlertAction!) in
+        let defaultAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {(alertAction: UIAlertAction!) in
             
             self.displayEmail()
         })
@@ -380,10 +380,21 @@ class QuizAPViewController: UIViewController, MFMailComposeViewControllerDelegat
             }
         }
         
-        //dismissQuiz(nil)
+        
     }
     
     func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
         dismissViewControllerAnimated(true, completion: nil)
+        
+        let alertController = UIAlertController(title: "Email Sent", message: "The email was sent successfully.", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        let defaultAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {(alertAction: UIAlertAction!) in
+            
+            self.dismissQuiz(nil)
+        })
+        
+        alertController.addAction(defaultAction)
+        presentViewController(alertController, animated: true, completion: nil)
+
     }
 }

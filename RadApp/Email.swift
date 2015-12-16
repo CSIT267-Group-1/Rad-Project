@@ -21,11 +21,10 @@ class Email
     func sendEmail(score: Int) -> String
     {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-       // var fileString: String = "Quiz Results/n\(appDelegate.firstName) \(appDelegate.lastName) ID: \(appDelegate.studentID)"
-        var fileString: String = ""
+        var fileString: String = "Quiz Results/n\(appDelegate.firstName) \(appDelegate.lastName) ID: \(appDelegate.studentID)"
         for var count = 0; count < quizes.count; count++
         {
-            fileString += "#\(count+1) \(quizes[count].question)/n/tYour Answer: \(quizes[count].userAnswer)/n/tCorrect Answer: \(quizes[count].correctStr)/n/n"
+            fileString += "#\(count+1) \(quizes[count].question)\n\tYour Answer: \(quizes[count].userAnswer)\n\tCorrect Answer: \(quizes[count].correctStr)\n\n"
         }
         
         fileString += "Total Score: \(score)/\(quizes.count)"

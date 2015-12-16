@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MessageUI
 
-class QuizLLDViewController: UIViewController {
+class QuizLLDViewController: UIViewController, MFMailComposeViewControllerDelegate {
     
     var currentSelectedArea: UIButton!
     var currentSelectedQuestionIndex: Int = -1 // stores the current question location from the array
@@ -401,12 +402,6 @@ class QuizLLDViewController: UIViewController {
         presentViewController(alertController, animated: true, completion: nil)
     }
     
-    func displayEmail()
-    {
-        //TESTING
-        dismissQuiz(nil)
-    }
-    
     func displayBariumButtons(boolean: Bool)
     {
         let bool = !boolean
@@ -429,5 +424,44 @@ class QuizLLDViewController: UIViewController {
         hepFelx.hidden=bool
         spleFlex.hidden=bool
         sigmoid.hidden=bool
+    }
+    
+    func displayEmail()
+    {
+        //TESTING
+        let email=Email(quizes: questions)
+        let resultsStr=email.sendEmail(right)
+        
+        if(MFMailComposeViewController.canSendMail())
+        {
+            
+            let mailComposer:MFMailComposeViewController = MFMailComposeViewController()
+            mailComposer.mailComposeDelegate=self
+            presentViewController(mailComposer, animated: true, completion: nil)
+            
+            print(mailComposer)
+            if let data = (resultsStr as NSString).dataUsingEncoding(NSUTF8StringEncoding){
+                //Attach File
+                mailComposer.addAttachmentData(data, mimeType: "text/plain", fileName: "Results")
+                self.presentViewController(mailComposer, animated: true, completion: nil)
+            }
+        }
+        
+        
+    }
+    
+    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
+        dismissViewControllerAnimated(true, completion: nil)
+        
+        let alertController = UIAlertController(title: "Email Sent", message: "The email was sent successfully.", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        let defaultAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {(alertAction: UIAlertAction!) in
+            
+            self.dismissQuiz(nil)
+        })
+        
+        alertController.addAction(defaultAction)
+        presentViewController(alertController, animated: true, completion: nil)
+        
     }
 }
